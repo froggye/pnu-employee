@@ -17,10 +17,17 @@
 }
 
 .greet-info {
-    width: 100%
+    width: 100%;
+    margin-right: 16px;
 }
 
-.greet-info a h5 {
+@media screen and (max-width: 780px) {
+    .greet-info {
+        margin: 0;
+    }
+}
+
+.greet-info a h6 {
     margin: 0;
     color: inherit;
 }
@@ -107,6 +114,34 @@
     to {opacity: 1}
 }
 
+/* STUDENT */
+
+.side-img {
+    width: 65%;
+    /*margin: 0 auto;*/
+    margin: auto;
+}
+
+.side-img img {
+    width: 100%;
+    /*height: 100%;
+    object-fit: cover;*/
+}
+
+@media screen and (max-width: 1100px) {
+    .side-img {
+        margin: 16px auto 0 auto;
+    }
+
+}
+
+@media screen and (max-width: 780px) {
+    .side-img {
+        width: 80%;
+    }
+
+}
+
 /*  CARDS  */
 
 .cards {
@@ -144,6 +179,34 @@
     flex-grow: 1;
     min-width: 0;
     display: inline-block;
+}
+
+/* RESOURCES */
+
+.res-links {
+    margin: auto;
+    text-align: center;
+}
+
+.res-links a {
+    margin: 0 40px;
+}
+
+@media screen and (max-width: 1100px) {
+    .res-links a {
+        margin: 0 20px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    /*.res-links a img {
+        transform: scale(80%);
+    }*/
+
+    .res-links a {
+        margin: 0 16px;
+    }
+
 }
 
 /*  SOCIAL  */
