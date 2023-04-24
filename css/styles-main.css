@@ -1,0 +1,126 @@
+
+/*  HEADER  */
+
+.header{
+    color: white;
+    font-size: 18px;
+    /*display: flex;
+    position: relative;
+    align-self: stretch;
+    align-items: center;
+    flex-direction: column;*/
+
+    background-image: linear-gradient(90deg, rgba(135, 7, 14, 0.6) 1.00%,rgba(135, 7, 14, 0.6) 100.00%),url("../img/head.jpg");*
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top left,center;
+
+
+    line-height: normal;
+    font-stretch: normal;
+}
+
+.header-inner {
+    width: 100%;
+}
+
+.header-top {
+    display: flex;
+    margin-top: 32px;
+    position: relative;
+    /*align-self: stretch;*/
+    align-items: center;
+    /*flex-shrink: 0;*/
+    gap: 20px;
+}
+
+@media screen and (max-width: 780px) {
+    .header-top {
+        margin-top: 48px;
+    }
+
+    .header-top img, .footer-inner img {
+        height: 50px;
+        width: auto;
+    }
+}
+
+.home-logo {
+    /*width: 46px;
+    height: 62px;*/
+    /*position: relative;*/
+    /*margin-right: 20px;*/
+    /*flex-grow: 0;*/
+    /*align-items: center;*/
+
+}
+
+.pnu-name {
+    /*height: auto;*/
+    flex-grow: 1;
+    /*align-self: auto;*/
+    /*text-align: left;*/
+    line-height: normal;
+    font-stretch: normal;
+}
+
+.login {
+    cursor: pointer;
+    position: relative;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.login table {
+    border-radius: 0;
+    background-color: transparent;
+}
+
+.login td{
+    border-right: none;
+}
+
+.login-link {
+    color: white;
+    font-weight: 700;
+    text-align: center;
+}
+
+.login:hover {
+    padding-right: 16px;
+}
+.login a:hover {
+    text-decoration: none;
+}
+
+.header-title {
+    display: flex;
+    padding: 80px 0;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+
+/*  FOOTER  */
+
+.footer {
+    color: white;
+    display: flex;
+    flex-shrink: 0;
+    margin-top: 40px;
+    background-color: #87070E;
+}
+
+.footer-inner {
+    width: 100%;
+    display: flex;
+    padding: 32px 0;
+    gap: 16px;
+}
+
+.contacts {
+    width: 100%;
+    font-size: 14px;
+    height: auto;
+}
+    

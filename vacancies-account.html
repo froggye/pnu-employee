@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заявки</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles-account.css">
+    <link rel="stylesheet" href="css/vacancies.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+    <script type="text/javascript" src="js/slideshow.js" async></script>
+    <script type="text/javascript" src="js/burger.js" async></script>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="header-inner">
+            <div class="header-top">
+                <img alt="pnu-logo" src="img/logo.png"/>
+            </div>
+            <div class="header-title">
+                <h2>Личный кабинет работодателя</h2>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+<nav class="menu">
+    <div class="container">
+        <div class="nav-menu" id="nav-list">
+            <div class="hamburger-top">
+                <div class="hamburger-title">Личный кабинет</div>
+                <div class="hamburger-icon" onclick="OpenBurger()">
+                    <!--<i class="fa fa-bars"></i>-->
+                    <div class="hamburger-bar"></div>
+                    <div class="hamburger-bar"></div>
+                    <div class="hamburger-bar"></div>
+                </div>
+            </div>
+            <ul class="nav-menu-list">
+                <a href="index.html" class="menu-link"><li class="menu-item">Главная</li></a>
+                <a href="login.html" class="menu-link"><li class="menu-item menu-login">Личный кабинет</li></a>
+                <a href="resume-search.html" class="menu-link"><li class="menu-item">Поиск резюме</li></a>
+                <a href="" class="menu-link"><li class="menu-item">База вакансий</li></a>
+                <a href="survey-employ.html" class="menu-link"><li class="menu-item">Анкета работодателя</li></a>
+                <a href="" target="_blank" class="menu-link"><li class="menu-item">Анкета выпускника</li></a>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main>
+    <div class="container">
+        <div class="profile-nav">
+            <nav class="profile-nav-wrapper">
+                <div class="profile-nav-content">
+                    <ul class="profile-nav-list">
+                        <li class="profile-nav-item"><a href="edit.html" class="profile-nav-link">
+                            <img class="profile-img1" src="img/svg/profile-edit.svg">
+                            <img class="profile-img2" src="img/svg/profile-edit-white.svg">
+                            <img class="profile-img3" src="img/svg/profile-edit-light.svg">
+                            <span class="nav-item-span">Редактировать данные организации</span>
+                        </a></li>
+                        <li class="profile-nav-item"><a href="vacancies-account.html" class="profile-nav-link">
+                            <img class="profile-img1" src="img/svg/profile-vacancies.svg">
+                            <img class="profile-img2" src="img/svg/profile-vacancies-white.svg">
+                            <img class="profile-img3" src="img/svg/profile-vacancies-light.svg"> &nbsp
+                            <span class="nav-item-span">Заявки на подбор специалистов</span>
+                        </a></li>
+                        <li class="profile-nav-item"><a href="login.html" class="profile-nav-link">
+                            <img class="profile-img1" src="img/svg/profile-exit.svg">
+                            <img class="profile-img2" src="img/svg/profile-exit-white.svg">
+                            <img class="profile-img3" src="img/svg/profile-exit-light.svg">
+                            <span class="nav-item-span">Выйти</span>
+                        </a></li>
+                    </ul>
+                    <hr style="margin:20px 0">
+                    <a class="profile-nav-link" href="https://pnu.edu.ru/ru/recruitment/start-career/" target="_blank"><h5>Центр "СТАРТ-КАРЬЕРА"</h5></a>
+                    <div class="timetable">
+                        <div class="col1">
+                            <p>пн-чт:</p>
+                            <p>пт:</p>
+                            <p><small>перерыв:</small></p>
+                        </div>
+                        <div class="col2">
+                            <p><small>09<sup>00</sup>-17<sup>00</sup></small></p>
+                            <p><small>09<sup>00</sup>-15<sup>00</sup></small></p>
+                            <p><small>12<sup>00</sup>-13<sup>00</sup></small></p>
+                        </div>
+                    </div>
+                    <ul class="profile-nav-contacts">
+                        <li class="profile-contact">
+                            <img class="profile-img1" src="img/svg/phone-dark.svg">
+                            <img class="profile-img2" src="img/svg/phone-light.svg">
+                            <span class="nav-item-span">(4212) 76-17-25</span>
+                        </li>
+                        <li class="profile-contact">
+                            <img class="profile-img1" src="img/svg/home-dark.svg">
+                            <img class="profile-img2" src="img/svg/home-light.svg">
+                            <span class="nav-item-span">229л</span>
+                        </li>
+                        <li class="profile-contact">
+                            <img src="img/svg/email.svg">
+                            <span class="nav-item-span"><a href="mailto: start-k@pnu.edu.ru">start-k@pnu.edu.ru</a></span>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="profile-body">
+            <h4>Заявки на подбор специалистов</h4>
+            <div class="table-show">
+                <div class="table-wrapper">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>№</th>
+                            <th>Наименование вакансии</th>
+                            <th>Название организации</th>
+                            <th>Город</th>
+                            <th>Дата поступления</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><a href="vacancy-account-id.html">Content 1</a></td>
+                            <td>Content 1</td>
+                            <td>Content 1</td>
+                            <td>Content 1</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><a href="vacancy-account-id.html">Content 2</a></td>
+                            <td>Content 2</td>
+                            <td>Content 2</td>
+                            <td>Content 2</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><a href="vacancy-account-id.html">Content 3</a></td>
+                            <td>Content 3</td>
+                            <td>Content 3</td>
+                            <td>Content 3</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <a class="button" href="vacancy-account-add.html"><button class="button blue" type="button">Добавить вакансию</button></a>
+        </div>
+    </div>
+</main>
+</body>
+</html>

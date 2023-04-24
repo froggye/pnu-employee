@@ -1,0 +1,48 @@
+
+.survey-form {
+    width: 100%;
+}
+
+.survey-line {
+    margin-bottom: 24px;
+}
+
+.question {
+    margin-bottom: 8px;
+    color: #0A4660;
+    font-weight: bold;
+}
+
+.options {
+    list-style-image: none;
+}
+
+.in-table {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.options li {
+    margin-bottom: 8px;
+}
+
+.options li label {
+    color: black;
+    font-weight: normal;
+}
+
+.options label{
+    font-weight: normal;
+    color: black;
+}
+
+.survey-table td {
+    text-align: left;
+}
+
+.wrong {
+    display: none;
+    color: red;
+    margin-top: 16px;
+}

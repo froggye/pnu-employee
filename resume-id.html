@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Поиск резюме</title>
+  <link rel="stylesheet" href="css/styles-main.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/resume-id.css">
+  <script type="text/javascript" src="js/burger.js" async></script>
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <div class="header-top">
+        <!--<div class="pnu-logo">-->
+        <img alt="pnu-logo" src="img/logo.png"/>
+        <span class="pnu-name">
+                            ТИХООКЕАНСКИЙ <br>ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ
+                        </span>
+        <!--</div>-->
+        <div class="login">
+          <a class="login-link" href="login.html">
+            <table><tr>
+              <td>
+                <img src="img/UserOutline.png"></img>
+              </td>
+              <td>
+                Личный кабинет
+              </td>
+            </tr></table>
+          </a>
+        </div>
+      </div>
+      <div class="header-title">
+        <h1>Трудоустройство</h1>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<nav class="menu">
+  <div class="container">
+    <div class="nav-menu" id="nav-list">
+      <div class="hamburger-top">
+        <div class="hamburger-title">Поиск резюме</div>
+        <div class="hamburger-icon" onclick="OpenBurger()">
+          <!--<i class="fa fa-bars"></i>-->
+          <div class="hamburger-bar"></div>
+          <div class="hamburger-bar"></div>
+          <div class="hamburger-bar"></div>
+        </div>
+      </div>
+      <ul class="nav-menu-list">
+        <a href="index.html" class="menu-link"><li class="menu-item">Главная</li></a>
+        <a href="login.html" class="menu-link"><li class="menu-item menu-login">Личный кабинет</li></a>
+        <a href="resume-search.html" class="menu-link"><li class="menu-item">Поиск резюме</li></a>
+        <a href="" class="menu-link"><li class="menu-item">База вакансий</li></a>
+        <a href="survey-employ.html" class="menu-link"><li class="menu-item">Анкета работодателя</li></a>
+        <a href="" target="_blank" class="menu-link"><li class="menu-item">Анкета выпускника</li></a>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="body">
+  <div class="container">
+    <div class="back">
+      <a href="javascript:history.back()">‹ Назад</a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="info">
+      <h4 id="name-here">Фамилия Имя Отчество</h4>
+      <div class="cards">
+        <div class="info-card">
+          <h5>Личные данные</h5>
+          <div class="info-card-text">
+              <div class="info-line">
+                <div class="info-label">Семейное положение</div>
+                <div class="info-text">
+                  Не состою в браке
+                </div>
+              </div>
+            <div class="info-line">
+              <div class="info-label">Дети</div>
+              <div class="info-text">
+                Нет детей
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h5>Образование</h5>
+          <div class="info-card-text">
+            <div class="info-line">
+              <div class="info-label">Учебное заведение</div>
+              <div class="info-text">
+                Тихоокеанский государственный университет
+              </div>
+            </div>
+          </div>
+          <div class="info-card-text">
+            <div class="info-line">
+                <div class="info-label">Факультет (институт)</div>
+                <div class="info-text">
+                  Факультет природопользования и экологии
+                </div>
+              </div>
+          </div>
+          <div class="info-card-text">
+            <div class="info-line">
+                <div class="info-label">Специальность</div>
+                <div class="info-text">
+                  Ландшафтная архитектура
+                </div>
+              </div>
+          </div>
+          <div class="info-card-text">
+            <div class="info-line">
+                <div class="info-label">Специализация</div>
+                <div class="info-text">
+                  -
+                </div>
+            </div>
+          </div>
+          <div class="info-card-text">
+              <div class="info-line">
+                <div class="info-label">Период обучения (годы)</div>
+                <div class="info-text">
+                  2018 - 2020
+                </div>
+              </div>
+          </div>
+          <div class="info-card-text">
+              <div class="info-line">
+                <div class="info-label">Достижения</div>
+                <div class="info-text">
+                  -
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="info-card">
+          <h5>Опыт работы</h5>
+          <div class="info-card-text">
+            <div class="info-line">
+              <div class="info-label">Должность</div>
+              <div class="info-text">
+                Практикант
+              </div>
+            </div>
+          </div>
+          <div class="info-card-text">
+            <div class="info-line">
+              <div class="info-label">Начало работы</div>
+              <div class="info-text">
+                Май 2017
+              </div>
+            </div>
+          </div>
+          <div class="info-card-text">
+            <div class="info-line">
+              <div class="info-label">Окончание</div>
+              <div class="info-text">
+                Июль 2017
+              </div>
+            </div>
+          </div>
+          <div class="info-card-text">
+            <div class="info-line">
+              <div class="info-label">Обязанности</div>
+              <div class="info-text">
+                 Посадка и уход за растениями.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h5>Преддипломная практика</h5>
+          <div class="info-card-text">
+            <div class="info-line">
+              <div class="info-label">Предприятие (организация)</div>
+              <div class="info-text">
+                Институт архитектуры и дизайна
+              </div>
+            </div>
+          </div>
+          <div class="info-card-text">
+            <div class="info-line">
+              <div class="info-label">Отдел, сектор, управление</div>
+              <div class="info-text">
+                Кафедра АиУ
+              </div>
+            </div>
+          </div>
+          <div class="info-card-text">
+            <div class="info-line">
+              <div class="info-label">Начало работы</div>
+              <div class="info-text">
+                Февраль 2020
+              </div>
+            </div>
+          </div>
+          <div class="info-card-text">
+            <div class="info-line">
+              <div class="info-label">Окончание</div>
+              <div class="info-text">
+                Апрель 2020
+              </div>
+            </div>
+          </div>
+          <div class="info-card-text">
+            <div class="info-line">
+              <div class="info-label">Должность (если была)</div>
+              <div class="info-text">
+                -
+              </div>
+            </div>
+          </div>
+          <div class="info-card-text">
+            <div class="info-line">
+              <div class="info-label">Обязанности</div>
+              <div class="info-text">
+                Разработка 50% объема дипломной работы
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h5>Значимые профессиональные навыки</h5>
+          <div class="info-card-text">
+            <div class="info-line">
+              <div class="info-label">Значимые про<wbr>фес<wbr>сио<wbr>наль<wbr>ные навыки</div>
+              <div class="info-text">
+                Описание
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h5>Дополнительная информация</h5>
+          <div class="info-card-text">
+            <div class="info-line">
+              <div class="info-label">Владение ПК</div>
+              <div class="info-text">
+                Уверенный пользователь
+              </div>
+            </div>
+          </div>
+          <div class="info-card-text">
+            <div class="info-line">
+              <div class="info-label">Иностранные языки</div>
+              <div class="info-text">
+                Английский язык
+              </div>
+            </div>
+          </div>
+          <div class="info-card-text">
+            <div class="info-line">
+              <div class="info-label">Другие сведения о до<wbr>пол<wbr>ни<wbr>тель<wbr>ной подготовке</div>
+              <div class="info-text">
+                Участие в Студенческой весне, фестиваль “Первокурсник”
+              </div>
+            </div>
+          </div>
+          <div class="info-card-text">
+            <div class="info-line">
+              <div class="info-label">Водительские права, стаж, наличие транспортного средства</div>
+              <div class="info-text">
+                -
+              </div>
+            </div>
+          </div>
+          <div class="info-card-text">
+            <div class="info-line">
+              <div class="info-label">Интересы, увлечения</div>
+              <div class="info-text">
+                Чтение книг
+              </div>
+            </div>
+          </div>
+          <div class="info-card-text">
+            <div class="info-line">
+              <div class="info-label">Личные качества</div>
+              <div class="info-text">
+                Коммуникабельность, стрессоустойчивость, доброжелательность
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h5>Желаемая вакансия</h5>
+          <div class="info-card-text">
+            <div class="info-line">
+              <div class="info-label">Должность, сфера деятельности</div>
+              <div class="info-text">
+                Дендролог
+              </div>
+            </div>
+          </div>
+          <div class="info-card-text">
+            <div class="info-line">
+              <div class="info-label">Город</div>
+              <div class="info-text">
+                Хабаровск
+              </div>
+            </div>
+          </div>
+          <div class="info-card-text">
+            <div class="info-line">
+              <div class="info-label">Район</div>
+              <div class="info-text">
+                -
+              </div>
+            </div>
+          </div>
+          <div class="info-card-text">
+            <div class="info-line">
+              <div class="info-label">Вид работы</div>
+              <div class="info-text">
+                Постоянная
+              </div>
+            </div>
+          </div>
+          <div class="info-card-text">
+            <div class="info-line">
+              <div class="info-label">График работы</div>
+              <div class="info-text">
+                Полный рабочий день
+              </div>
+            </div>
+          </div>
+          <div class="info-card-text">
+            <div class="info-line">
+              <div class="info-label">Желаемая зарплата (рублей)</div>
+              <div class="info-text">
+                20000
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+                <span class="contacts">
+                    8 (4212) 76-17-25
+                    <br>
+                    +7 (914) 414-33-79 (WhatsApp)
+                    <br>
+                    start-k@pnu.edu.ru
+                </span>
+      <img alt="pnu-logo" src="img/logo.png"/>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,14 @@
+
+/*  HEADER  */
+
+.header{
+    color: white;
+    background-color: #87070E;
+    margin-bottom: 64px;
+}
+
+.header-inner {
+    width: 100%;
+    padding: 16px 0;
+}
+

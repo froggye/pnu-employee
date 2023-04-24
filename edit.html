@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Карточка работодателя</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles-account.css">
+  <link rel="stylesheet" href="css/register.css">
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+  <script type="text/javascript" src="js/display_img.js" async></script>
+  <script type="text/javascript" src="js/slideshow.js" async></script>
+  <script type="text/javascript" src="js/burger.js" async></script>
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <div class="header-top">
+        <img alt="pnu-logo" src="img/logo.png"/>
+      </div>
+      <div class="header-title">
+        <h2>Личный кабинет работодателя</h2>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<nav class="menu">
+  <div class="container">
+    <div class="nav-menu" id="nav-list">
+      <div class="hamburger-top">
+        <div class="hamburger-title">Личный кабинет</div>
+        <div class="hamburger-icon" onclick="OpenBurger()">
+          <!--<i class="fa fa-bars"></i>-->
+          <div class="hamburger-bar"></div>
+          <div class="hamburger-bar"></div>
+          <div class="hamburger-bar"></div>
+        </div>
+      </div>
+      <ul class="nav-menu-list">
+        <a href="index.html" class="menu-link"><li class="menu-item">Главная</li></a>
+        <a href="login.html" class="menu-link"><li class="menu-item menu-login">Личный кабинет</li></a>
+        <a href="resume-search.html" class="menu-link"><li class="menu-item">Поиск резюме</li></a>
+        <a href="survey-employ.html" class="menu-link"><li class="menu-item">Анкета работодателя</li></a>
+        <a href="https://pnu.edu.ru/ru/recruitment/yarmarka/" target="_blank" class="menu-link"><li class="menu-item">Ярмарка вакансий</li></a>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="container">
+    <div class="profile-nav">
+      <nav class="profile-nav-wrapper">
+          <div class="profile-nav-content">
+            <ul class="profile-nav-list">
+              <li class="profile-nav-item"><a href="edit.html" class="profile-nav-link">
+                <img class="profile-img1" src="img/svg/profile-edit.svg">
+                <img class="profile-img2" src="img/svg/profile-edit-white.svg">
+                <img class="profile-img3" src="img/svg/profile-edit-light.svg">
+                <span class="nav-item-span">Редактировать данные организации</span>
+              </a></li>
+              <li class="profile-nav-item"><a href="vacancies-account.html" class="profile-nav-link">
+                <img class="profile-img1" src="img/svg/profile-vacancies.svg">
+                <img class="profile-img2" src="img/svg/profile-vacancies-white.svg">
+                <img class="profile-img3" src="img/svg/profile-vacancies-light.svg"> &nbsp
+                <span class="nav-item-span">Заявки на подбор специалистов</span>
+              </a></li>
+              <li class="profile-nav-item"><a href="login.html" class="profile-nav-link">
+                <img class="profile-img1" src="img/svg/profile-exit.svg">
+                <img class="profile-img2" src="img/svg/profile-exit-white.svg">
+                <img class="profile-img3" src="img/svg/profile-exit-light.svg">
+                <span class="nav-item-span">Выйти</span>
+              </a></li>
+            </ul>
+            <hr style="margin:20px 0">
+            <a class="profile-nav-link" href="https://pnu.edu.ru/ru/recruitment/start-career/" target="_blank"><h5>Центр "СТАРТ-КАРЬЕРА"</h5></a>
+            <div class="timetable">
+              <div class="col1">
+                <p>пн-чт:</p>
+                <p>пт:</p>
+                <p><small>перерыв:</small></p>
+              </div>
+              <div class="col2">
+                <p><small>09<sup>00</sup>-17<sup>00</sup></small></p>
+                <p><small>09<sup>00</sup>-15<sup>00</sup></small></p>
+                <p><small>12<sup>00</sup>-13<sup>00</sup></small></p>
+              </div>
+            </div>
+            <ul class="profile-nav-contacts">
+              <li class="profile-contact">
+                <img class="profile-img1" src="img/svg/phone-dark.svg">
+                <img class="profile-img2" src="img/svg/phone-light.svg">
+                <span class="nav-item-span">(4212) 76-17-25</span>
+              </li>
+              <li class="profile-contact">
+                <img class="profile-img1" src="img/svg/home-dark.svg">
+                <img class="profile-img2" src="img/svg/home-light.svg">
+                <span class="nav-item-span">229л</span>
+              </li>
+              <li class="profile-contact">
+                <img src="img/svg/email.svg">
+                <span class="nav-item-span"><a href="mailto: start-k@pnu.edu.ru">start-k@pnu.edu.ru</a></span>
+              </li>
+            </ul>
+          </div>
+      </nav>
+    </div>
+    <div class="profile-body">
+      <h4>Карточка работодателя</h4>
+      <form class="form" style="width: 100%">
+        <small>Поля отмеченные <b style="color: #AA311D">*</b> обязательны для заполнения.</small>
+        <br><br>
+        <div class="form-wrapper">
+          <div class="form-header">
+            <h5>Информация об организации</h5>
+          </div>
+          <div class="form-content">
+            <div class="form-line">
+              <label class="line-label">Логотип</label>
+              <div class="register-control">
+                <div id="display-img"></div>
+                <!--<img id="default_img" src="img/svg/img-default.svg" class="default-img" style="max-height:100px;max-width:100px">-->
+                <input id="id_org_form-logo" name="org_form-logo" type="file" accept="image/jpg, image/jpeg, image/png">
+              </div>
+            </div>
+            <div class="form-line">
+              <label class="line-label">Название организации<b style="color: #AA311D">*</b></label>
+              <div class="register-control">
+                <input class="input" id="id_org_name" name="org_name" type="text" required>
+              </div>
+            </div>
+            <div class="form-line">
+              <label class="line-label">Направление деятельности<b style="color: #AA311D">*</b></label>
+              <div class="register-control">
+                <textarea rows="3" id="id_org_description" name="org_description" required></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-wrapper">
+          <div class="form-header">
+            <h5>Адрес организации</h5>
+          </div>
+          <div class="form-content">
+            <div class="form-line">
+              <label class="line-label">Город<b style="color: #AA311D">*</b></label>
+              <div class="register-control">
+                <input class="input" id="id_org_city" name="org_city" type="text" required>
+              </div>
+            </div>
+            <div class="form-line">
+              <label class="line-label">Улица<b style="color: #AA311D">*</b></label>
+              <div class="register-control">
+                <input class="input" id="id_org_street" name="org_street" type="text" required>
+              </div>
+            </div>
+            <div class="form-line">
+              <label class="line-label">Дом<b style="color: #AA311D">*</b></label>
+              <div class="register-control">
+                <input class="input" id="id_org_building" name="org_building" type="text" required>
+              </div>
+            </div>
+            <div class="form-line">
+              <label class="line-label">Почтовый индекс<b style="color: #AA311D">*</b></label>
+              <div class="register-control">
+                <input class="input" id="id_org_zip" name="org_zip" type="text" required>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-wrapper">
+          <div class="form-header">
+            <h5>Контактные данные организации</h5>
+          </div>
+          <div class="form-content">
+            <div class="form-line">
+              <label class="line-label">Телефон (общий)<b style="color: #AA311D">*</b></label>
+              <div class="register-control">
+                <input class="input" id="id_org_phone" name="org_phone" type="text" required>
+              </div>
+            </div>
+            <div class="form-line">
+              <label class="line-label">Эл. почта корпоративная<b style="color: #AA311D">*</b></label>
+              <div class="register-control">
+                <input class="input" id="id_org_email" name="org_email" type="email" required>
+              </div>
+            </div>
+            <div class="form-line">
+              <label class="line-label">Факс</label>
+              <div class="register-control">
+                <input class="input" id="id_org_fax" name="org_fax" type="text">
+              </div>
+            </div>
+            <div class="form-line">
+              <label class="line-label">Сайт</label>
+              <div class="register-control">
+                <input class="input" id="id_org_web" name="org_web" type="text">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-wrapper">
+          <div class="form-header">
+            <h5>Руководитель организации</h5>
+          </div>
+          <div class="form-content">
+            <div class="form-line">
+              <label class="line-label">Фамилия</label>
+              <div class="register-control">
+                <input class="input" id="id_org_head_surname" name="head_surname" type="text">
+              </div>
+            </div>
+            <div class="form-line">
+              <label class="line-label">Имя</label>
+              <div class="register-control">
+                <input class="input" id="id_org_head_firstname" name="org_head_firstname" type="text">
+              </div>
+            </div>
+            <div class="form-line">
+              <label class="line-label">Отчество</label>
+              <div class="register-control">
+                <input class="input" id="id_org_head_lastname" name="org_head_lastname" type="text">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-wrapper">
+          <div class="form-header">
+            <h5>Контактное лицо</h5>
+          </div>
+          <div class="form-content">
+            <div class="form-line">
+              <label class="line-label">Фамилия<b style="color: #AA311D">*</b></label>
+              <div class="register-control">
+                <input class="input" id="id_org_manager_surname" name="org_manager_surname" type="text" required>
+              </div>
+            </div>
+            <div class="form-line">
+              <label class="line-label">Имя<b style="color: #AA311D">*</b></label>
+              <div class="register-control">
+                <input class="input" id="id_org_manager_name" name="org_manager_name" type="text" required>
+              </div>
+            </div>
+            <div class="form-line">
+              <label class="line-label">Отчество<b style="color: #AA311D">*</b></label>
+              <div class="register-control">
+                <input class="input" id="id_org_manager_lastname" name="org_manager_lastname" type="text" required>
+              </div>
+            </div>
+            <div class="form-line">
+              <label class="line-label">Должность<b style="color: #AA311D">*</b></label>
+              <div class="register-control">
+                <input class="input" id="id_org_manager_post" name="org_manager_post" type="text" required>
+              </div>
+            </div>
+            <div class="form-line">
+              <label class="line-label">Телефон<b style="color: #AA311D">*</b></label>
+              <div class="register-control">
+                <input class="input" id="id_org_manager_phone" name="org_manager_phone" type="text" required>
+              </div>
+            </div>
+            <div class="form-line">
+              <label class="line-label">Эл. почта<b style="color: #AA311D">*</b></label>
+              <div class="register-control">
+                <input class="input" id="id_org_manager_email" name="org_manager_email" type="email" required>
+              </div>
+            </div>
+            <div class="form-line">
+              <label class="line-label">Логин<b style="color: #AA311D">*</b></label>
+              <div class="register-control">
+                <input class="input" id="id_org_manager_login" name="org_manager_login" type="text" required>
+              </div>
+            </div>
+            <div class="form-line">
+              <label class="line-label">Пароль<b style="color: #AA311D">*</b></label>
+              <div class="register-control">
+                <input class="input" id="id_org_manager_pwrd" name="org_manager_pwrd" type="password" required>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="buttons">
+          <a class="button" href="edit.html"><button class="button blue" type="submit">Сохранить</button></a> <!--change to submit-->
+        </div>
+        <div class="wrong">
+          <img src="img/svg/error.svg">&nbsp&nbsp
+          Пожалуйста, заполните все необходимые поля
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
+</body>
+</html>

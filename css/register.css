@@ -1,0 +1,103 @@
+
+.title {
+    width: 100%;
+    text-align: center;
+}
+
+
+.form {
+    width: 988px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 780px) {
+    .form {
+        width: 100%;
+    }
+}
+
+.form-wrapper {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 8px 0 #C7C7C7;
+    margin-bottom: 40px;
+
+}
+
+.form-header {
+    padding: 32px;
+    background-color: #F0F0F0;
+    border-radius: 20px 20px 0 0;
+}
+
+.form-header h5{
+    margin: 0;
+}
+
+.form-content {
+    padding: 32px 24px 40px 24px;
+}
+
+.form-line {
+    display: flex;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.line-label {
+    padding-right: 16px;
+    float: left;
+    position: relative;
+    width: 220px;
+
+    font-weight: bold;
+    color: #0A4660;
+}
+
+.register-control {
+    width: 100%;
+    position: relative;
+    float: left;
+    display: inline-block;
+}
+
+@media screen and (max-width: 780px) {
+    .form-line {
+        display: inline-block;
+    }
+}
+
+#display-img {
+    width: 130px;
+    height: 130px;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../img/svg/img-default.svg");
+}
+
+.buttons {
+    margin-bottom: 32px;
+    display: inline-block;
+    margin-right: 32px;
+}
+
+.wrong {
+    color: red;
+    visibility: hidden;
+    margin-bottom: 64px;
+}
+
+@media screen and (max-width: 562px) {
+    .buttons {
+        float: right;
+        /*width: 100%;*/
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .buttons {
+        float: left;
+        width: 100%;
+    }
+}
+

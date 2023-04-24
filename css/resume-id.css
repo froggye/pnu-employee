@@ -1,0 +1,60 @@
+
+.info {
+    width: 70%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 780px) {
+    .info {
+        width: 100%;
+    }
+}
+
+.info-card {
+    box-shadow: 0 0 8px 0 #C7C7C7;
+    border-radius: 8px;
+    padding: 32px 20px 40px 20px;
+    margin-bottom: 32px;
+}
+
+.info-card-text {
+    padding: 0 16px;
+    display: block;
+}
+
+.info-line {
+    margin: 16px 0;
+    display: inline-block;
+    width: 100%;
+}
+
+.info-label {
+    margin-right: 16px;
+    float: left;
+    display: inline-block;
+    width: 200px;
+
+    font-weight: bold;
+    color: #0A4660;
+}
+
+.info-text {
+    margin-left: 200px;
+    position: relative;
+}
+
+@media screen and (max-width: 780px) {
+    .info-label {
+        width: 100px;
+    }
+
+    .info-text {
+        margin-left: 120px;
+    }
+
+    .info-card-text {
+        padding: 0;
+    }
+
+}
+

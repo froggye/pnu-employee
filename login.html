@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles-auth.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+<header class="header">
+    <div class="container">
+        <div class="header-inner">
+            <a href="index.html"><img alt="pnu-logo" src="img/logo.png"/></a>
+        </div>
+    </div>
+</header>
+
+<main class="body">
+    <div class="container">
+        <div class="title">
+            <h4>Личный кабинет работодателя</h4>
+        </div>
+    </div>
+    <div class="container">
+        <form class="form" action="edit.html">
+            <small>Заявка на подбор специалиста заполняется в личном кабинете.</small>
+            <br><br>
+            <div class="form-wrapper">
+                <div class="form-field">
+                    <div class="icon">
+                        <img src="img/svg/login-icon.svg">
+                    </div>
+                    <div class="form-input">
+                        <input class="input" id="id_login" name="login" type="text" placeholder="Логин" required>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <div class="icon">
+                        <img src="img/svg/lock-icon.svg">
+                    </div>
+                    <div class="form-input">
+                        <input class="input" id="id_pwrd" name="pwrd" type="password" placeholder="Пароль" required>
+                    </div>
+                </div>
+                <div class="forgot-pwrd">
+                    <a class="button" href="password-restore.html">Забыли пароль</a>
+                </div>
+                <!--TODO: вставить каптчу-->
+                <div class="check">
+                    <label for="id_gdpr"><input class="checkbox" id="id_gdpr" name="gdpr" type="checkbox" required><small> Согласен на обработку персональных данных</small></label>
+                </div>
+                <div class="buttons">
+                    <a class="button" href="edit.html"><button class="button blue" type="submit">Войти</button></a> &nbsp&nbsp&nbsp  <!--change to submit-->
+                    <a class="button" href="register.html"><button class="button white" type="button" formnovalidate>Регистрация</button></a>  <!--change to submit-->
+                </div>
+                <div class="wrong">
+                    <img src="img/svg/error.svg">&nbsp&nbsp
+                    Неверный логин или пароль
+                </div>
+
+            </div>
+        </form>
+    </div>
+</main>
+
+</body>
+</html>

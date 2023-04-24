@@ -1,0 +1,103 @@
+
+
+.title {
+    width: 100%;
+    text-align: center;
+}
+
+.form {
+    width: 630px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 780px) {
+    .form {
+        width: 100%;
+    }
+}
+
+.form-wrapper {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 8px 0 #C7C7C7;
+    padding: 64px 32px 50px 32px;
+}
+
+.form-field {
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    display: inline-block;
+    margin-right: 32px;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+.form-input {
+    width: 100%;
+}
+
+@media screen and (max-width: 780px) {
+    .icon {
+        margin-right: 16px;
+    }
+}
+
+.check {
+    padding: 16px 0 16px 64px;
+}
+
+.check label {
+    font-weight: normal;
+    color: black;
+
+}
+
+.forgot-pwrd {
+    display: flex;
+    justify-content: end;
+    padding: 8px 0;
+}
+
+.forgot-pwrd a {
+    color: #0A4660;
+    font-weight: bold;
+}
+
+.forgot-pwrd a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.buttons, .button_ {
+    display: flex;
+    margin: 16px 0 16px 64px;
+}
+
+.buttons .button {
+    width: 100%;
+}
+
+.button_ .buttton {
+    width: auto;
+}
+
+@media screen and (max-width: 780px) {
+    .buttons {
+        margin: 16px auto;
+        display: block;
+        max-width: 75%;
+    }
+
+    .check {
+        padding: 16px 0 16px 0;
+    }
+}
+
+.wrong {
+    color: red;
+    visibility: hidden;
+}

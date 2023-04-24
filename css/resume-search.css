@@ -1,0 +1,100 @@
+
+.filter {
+    width: 100%;
+    margin-bottom: 80px;
+}
+
+.filter-item {
+    margin: 24px 0;
+    display: flex;
+    /*align-items: center;*/
+    /*margin: auto 0;*/
+}
+
+.filter-list {
+    width: 75%;
+}
+
+.filter-select {
+    width: 100%;
+}
+
+.filter-buttons {
+    margin: 48px 0 0 220px;
+}
+
+.table-show {
+    width: 100%;
+}
+
+.table-pages {
+    margin: 32px 0;
+    width: 100%;
+    text-align: center;
+    display:inline;
+}
+
+.pages {
+    list-style-image: none;
+    padding: 0;
+    margin: 0;
+    /*display: flex;*/
+}
+
+.pages li {
+    display: inline;
+    padding: 0;
+}
+
+.pages li a,
+.pages li span {
+    font-weight: bold;
+    color: #0A4660;
+    padding: 8px 12px;
+    /*float: left;*/
+}
+
+.pages li a:hover {
+    text-decoration: none;
+    background-color: #F0F5F8;
+}
+
+.pages li .current-page{
+    color: white;
+    background-color: #1493A5;
+}
+
+.pages .disabled span {
+    color: #858585;
+}
+
+@media screen and (max-width: 780px) {
+    .filter {
+        margin-bottom: 40px;
+    }
+
+    .filter-list {
+        width: 100%;
+    }
+
+    .filter-item {
+        flex-direction: column;
+        margin: 16px 0;
+    }
+
+    .filter-buttons {
+        /*margin: 24px auto;*/
+        display: block;
+        margin: 20px 0 0 0;
+    }
+
+    .table-pages {
+        margin: 16px 0;
+    }
+
+    .pages li a,
+    .pages li span {
+        float: left;
+    }
+
+}

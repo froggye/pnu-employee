@@ -1,0 +1,64 @@
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.table-show {
+    margin-bottom: 60px;
+}
+
+@media (max-width: 1100px) {
+    th, td, td a {
+        font-size: 14px;
+    }
+}
+
+.profile-body {
+    margin-bottom: 80px;
+}
+
+.form-line {
+    display: flex;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.line-label {
+    padding-right: 16px;
+    float: left;
+    position: relative;
+    width: 250px;
+
+    font-weight: bold;
+    color: #0A4660;
+}
+
+.vacancy-control {
+    width: 100%;
+    position: relative;
+    float: left;
+    display: inline-block;
+}
+
+@media screen and (max-width: 1100px) {
+    .form-line {
+        display: inline-block;
+    }
+
+    .line-label {
+        width: 100%;
+    }
+}
+
+.line-label.small {
+    width: 10%;
+    padding-left: 16px;
+}
+
+.buttons {
+    float: right;
+    margin-top: 52px;
+    margin-bottom: 20px;
+}
+
+
