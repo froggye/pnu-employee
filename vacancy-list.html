@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>База вакансий</title>
+  <link rel="stylesheet" href="css/styles-main.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/vacancy-list.css">
+  <script type="text/javascript" src="js/burger.js" async></script>
+</head>
+
+
+<body>
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <div class="header-top">
+        <!--<div class="pnu-logo">-->
+        <img alt="pnu-logo" src="img/logo.png"/>
+        <span class="pnu-name">
+                            ТИХООКЕАНСКИЙ <br>ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ
+                        </span>
+        <!--</div>-->
+        <div class="login">
+          <a class="login-link" href="login.html">
+            <table><tr>
+              <td>
+                <img src="img/UserOutline.png"></img>
+              </td>
+              <td>
+                Личный кабинет
+              </td>
+            </tr></table>
+          </a>
+        </div>
+      </div>
+      <div class="header-title">
+        <h1>Трудоустройство</h1>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<nav class="menu">
+  <div class="container">
+    <div class="nav-menu" id="nav-list">
+      <div class="hamburger-top">
+        <div class="hamburger-title">База вакансий</div>
+        <div class="hamburger-icon" onclick="OpenBurger()">
+          <!--<i class="fa fa-bars"></i>-->
+          <div class="hamburger-bar"></div>
+          <div class="hamburger-bar"></div>
+          <div class="hamburger-bar"></div>
+        </div>
+      </div>
+      <ul class="nav-menu-list">
+        <a href="index.html" class="menu-link"><li class="menu-item">Главная</li></a>
+        <a href="login.html" class="menu-link"><li class="menu-item menu-login">Личный кабинет</li></a>
+        <a href="resume-search.html" class="menu-link"><li class="menu-item">Поиск резюме</li></a>
+        <a href="vacancy-list.html" class="menu-link"><li class="menu-item">База вакансий</li></a>
+        <a href="survey-employ.html" class="menu-link"><li class="menu-item">Анкета работодателя</li></a>
+        <a href="survey-student.html" class="menu-link"><li class="menu-item">Анкета выпускника</li></a>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="body">
+  <div class="container">
+    <h4>База вакансий</h4>
+  </div>
+  <div class="container">
+    <div class="search">
+      <input type="search" id="vacancy-search" class="input" placeholder="Найти">
+      <button class="search-button"><img src="img/svg/search.svg"></button>
+    </div>
+
+  </div>
+
+  <div class="container">
+    <div class="filter-buttons">
+      <!--TODO: добавить проверку на вход в личный кабинет-->
+      <a class="button" href="vacancy-account-add.html"><button class="button blue" type="button">Оставить вакансию</button></a>&nbsp;&nbsp;
+      <a class="button" href="https://portal.pnu.edu.ru/student_office/resume/"><button class="button blue" type="button">Разместить резюме</button></a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="vacancy-list">
+      <div class="vacancy-card">
+        <div class="card-image">
+          <img src="img/placeholder-img.png">
+        </div>
+        <div class="card-body">
+          <div class="card-head">
+            <h6>Название организации</h6>
+            <p><small>31.03.2023&nbsp;03:03</small></p>
+          </div>
+          <div class="card-title">
+            <a><h5>Наименование вакансии</h5></a>
+            <h6>Уровень з/п</h6>
+            <p>Место работы &bull; Полный рабочий день &bull; Занятость: ---</p>
+          </div>
+          <div class="card-description">
+            <p>Основные обязанности</p>
+          </div>
+
+        </div>
+      </div>
+      <div class="vacancy-card">
+        <div class="card-image">
+          <img src="img/placeholder-img.png">
+        </div>
+        <div class="card-body">
+          <div class="card-head">
+            <h6>Название организации</h6>
+            <p><small>31.03.2023&nbsp;03:03</small></p>
+          </div>
+          <div class="card-title">
+            <a><h5>Наименование вакансии</h5></a>
+            <h6>Уровень з/п</h6>
+            <p>Место работы &bull; Полный рабочий день &bull; Занятость: ---</p>
+          </div>
+          <div class="card-description">
+            <p>Основные обязанности</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="list-pages">
+      <ul class="pages">
+        <li class="disabled"><span>‹‹</span></li>
+        <li class="active"><span class="current-page">1</span></li>
+        <li><a class="page" href="">2</a></li>
+        <li><a class="page" href="">3</a></li>
+        <li><a class="page" href="">4</a></li>
+        <li class="disabled"><span>...</span></li>
+        <li><a class="page" href="">60</a></li>
+        <li><a class="page" href="">61</a></li>
+        <li><a class="page" href="">62</a></li>
+        <li><a class="page" href="">63</a></li>
+        <li><a class="page" href="">››</a></li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <span class="contacts">
+        8 (4212) 76-17-25
+        <br>
+        +7 (914) 414-33-79 (WhatsApp)
+        <br>
+        start-k@pnu.edu.ru
+      </span>
+      <img alt="pnu-logo" src="img/logo.png"/>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

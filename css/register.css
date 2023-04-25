@@ -101,3 +101,12 @@
     }
 }
 
+.check {
+    padding-bottom: 20px;
+}
+
+.check label {
+    font-weight: normal;
+    color: black;
+
+}

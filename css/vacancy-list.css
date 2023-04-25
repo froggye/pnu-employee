@@ -1,0 +1,164 @@
+
+.search {
+    width: 100%;
+    display: flex;
+    margin: 20px 0;
+}
+
+.search input {
+    margin-right: 20px;
+}
+
+.search-button {
+    border-radius: 30px;
+    border: none;
+    padding: 0 12px;
+    background-color: transparent;
+}
+
+.search-button:hover {
+    cursor: pointer;
+    background-color: #D9D9D9;
+}
+
+.vacancy-list {
+    display: inline-block;
+    width: 100%;
+    margin-top: 32px;
+}
+
+.vacancy-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 32px;
+    margin-bottom: 32px;
+    width: 100%;
+    box-shadow: 0 0 8px 0 #C7C7C7;
+    display: flex;
+}
+
+@media screen and (max-width: 780px) {
+    .vacancy-card {
+        padding: 16px;
+        display: block;
+    }
+}
+
+.card-image img {
+    border-radius: 8px;
+    object-fit: cover;
+    height: 130px;
+    width: 130px;
+}
+
+@media screen and (max-width: 780px) {
+    .card-image img {
+        height: 100px;
+        width: 100px;
+    }
+}
+
+.card-body {
+    margin-left: 32px;
+    width: 100%;
+}
+
+@media screen and (max-width: 780px) {
+    .card-body {
+        margin-left: 0;
+        margin-top: 16px;
+    }
+}
+
+.card-head {
+    margin-bottom: 32px;
+    display: flex;
+}
+
+@media screen and (max-width: 780px) {
+    .card-head {
+        display: block;
+    }
+}
+
+.card-head h6 {
+    margin: 0;
+    color: #858585;
+    width: 100%;
+}
+
+.card-head p {
+    margin: 0;
+    color: #858585;
+}
+
+.card-title {
+    margin-bottom: 32px;
+}
+
+.card-title h5 {
+    color: inherit;
+    margin-bottom: 16px;
+}
+
+.card-title h5:hover {
+    cursor: pointer;
+}
+
+.card-title p {
+    color: #858585;
+}
+
+.list-pages {
+    margin: 32px 0;
+    width: 100%;
+    text-align: center;
+    display:inline;
+}
+
+.pages {
+    list-style-image: none;
+    padding: 0;
+    margin: 0;
+    /*display: flex;*/
+}
+
+.pages li {
+    display: inline;
+    padding: 0;
+}
+
+.pages li a,
+.pages li span {
+    font-weight: bold;
+    color: #0A4660;
+    padding: 8px 12px;
+    /*float: left;*/
+}
+
+.pages li a:hover {
+    text-decoration: none;
+    background-color: #F0F5F8;
+}
+
+.pages li .current-page{
+    color: white;
+    background-color: #1493A5;
+}
+
+.pages .disabled span {
+    color: #858585;
+}
+
+@media screen and (max-width: 780px) {
+    .list-pages {
+        margin: 16px 0;
+    }
+
+    .pages li a,
+    .pages li span {
+        float: left;
+    }
+
+}
+

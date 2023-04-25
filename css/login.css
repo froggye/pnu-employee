@@ -46,15 +46,7 @@
     }
 }
 
-.check {
-    padding: 16px 0 16px 64px;
-}
 
-.check label {
-    font-weight: normal;
-    color: black;
-
-}
 
 .forgot-pwrd {
     display: flex;

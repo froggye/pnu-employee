@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Анкета выпускника</title>
+  <link rel="stylesheet" href="css/styles-main.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/survey.css">
+  <script type="text/javascript" src="js/burger.js" async></script>
+  <script type="text/javascript" src="js/check_listener.js"></script>
+</head>
+
+<!--TODO: change to required-->
+
+<body>
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <div class="header-top">
+        <!--<div class="pnu-logo">-->
+        <img alt="pnu-logo" src="img/logo.png"/>
+        <span class="pnu-name">
+                            ТИХООКЕАНСКИЙ <br>ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ
+                        </span>
+        <!--</div>-->
+        <div class="login">
+          <a class="login-link" href="login.html">
+            <table><tr>
+              <td>
+                <img src="img/UserOutline.png"></img>
+              </td>
+              <td>
+                Личный кабинет
+              </td>
+            </tr></table>
+          </a>
+        </div>
+      </div>
+      <div class="header-title">
+        <h1>Трудоустройство</h1>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<nav class="menu">
+  <div class="container">
+    <div class="nav-menu" id="nav-list">
+      <div class="hamburger-top">
+        <div class="hamburger-title">Анкета выпускника</div>
+        <div class="hamburger-icon" onclick="OpenBurger()">
+          <!--<i class="fa fa-bars"></i>-->
+          <div class="hamburger-bar"></div>
+          <div class="hamburger-bar"></div>
+          <div class="hamburger-bar"></div>
+        </div>
+      </div>
+      <ul class="nav-menu-list">
+        <a href="index.html" class="menu-link"><li class="menu-item">Главная</li></a>
+        <a href="login.html" class="menu-link"><li class="menu-item menu-login">Личный кабинет</li></a>
+        <a href="resume-search.html" class="menu-link"><li class="menu-item">Поиск резюме</li></a>
+        <a href="vacancy-list.html" class="menu-link"><li class="menu-item">База вакансий</li></a>
+        <a href="survey-employ.html" class="menu-link"><li class="menu-item">Анкета работодателя</li></a>
+        <a href="survey-student.html" class="menu-link"><li class="menu-item">Анкета выпускника</li></a>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="body">
+  <div class="container">
+    <h4>Анкета выпускника</h4>
+  </div>
+  <div class="container">
+    <p>
+      Уважаемые выпускники Тихоокеанского государственного университета! В рамках подготовки ФГБОУ ВО ТОГУ к прохождению государственной аккредитации в 2019 году, просим Вас ответить на вопросы анкеты, которые позволят оценить значимость профессиональных качеств, сформированных за время обучения в вузе для Вашей профессиональной деятельности. Спасибо за сотрудничество!
+    </p>
+  </div>
+  <div class="container">
+    <form id="survey-form" class="survey-form" onsubmit="return getData();">
+      <div class="survey-line">
+        <div class="question">
+          1. Уровень образования
+        </div>
+        <select id="grad_edu_level" name="grad_edu_level">
+          <option value="бакалавр">бакалавр</option>
+          <option value="специалист">специалист</option>
+          <option value="магистр">магистр</option>
+        </select>
+      </div>
+      <div class="survey-line">
+        <div class="question">
+          2. Специальность (направление подготовки) по диплому
+        </div>
+        <select id="speciality" name="speciality">
+          <option value="Управление качеством">Управление качеством</option>
+          <option value="Инноватика">Инноватика</option>
+          <option value="Дизайн архитектурной среды">Дизайн архитектурной среды</option>
+          <option value="Дополнительная образовательная программа &quot;Международное сотрудничество в сфере управления малого и среднего бизнеса приграничных территорий РФ и КНР в условиях цифровой экономики&quot;">Дополнительная образовательная программа "Международное сотрудничество в сфере управления малого и среднего бизнеса приграничных территорий РФ и КНР в условиях цифровой экономики"</option>
+          <option value="Архитектура">Архитектура</option>
+          <option value="Юриспруденция">Юриспруденция</option>
+          <option value="Тепловые двигатели">Тепловые двигатели</option>
+          <option value="Методология и технология профессионального образования">Методология и технология профессионального образования</option>
+          <option value="Общая психология, психология личности, история психологии">Общая психология, психология личности, история психологии</option>
+          <option value="Бизнес-информатика">Бизнес-информатика</option>
+          <option value="Информационно-измерительные и управляющие системы">Информационно-измерительные и управляющие системы</option>
+          <option value="Наземные транспортно-технологические средства">Наземные транспортно-технологические средства</option>
+          <option value="Теория и методика обучения и воспитания (по областям и уровням образования)">Теория и методика обучения и воспитания (по областям и уровням образования)</option>
+          <option value="Искусственный интеллект и машинное обучение">Искусственный интеллект и машинное обучение</option>
+          <option value="Прикладная информатика в экономике">Прикладная информатика в экономике</option>
+          <option value="Электро- и теплотехника">Электро- и теплотехника</option>
+          <option value="Технология художественной обработки материалов">Технология художественной обработки материалов</option>
+          <option value="Техносферная безопасность">Техносферная безопасность</option>
+          <option value="Информатика и вычислительная техника">Информатика и вычислительная техника</option>
+          <option value="Подготовка к поступлению в вуз">Подготовка к поступлению в вуз</option>
+          <option value="Специальное (дефектологическое) образование">Специальное (дефектологическое) образование</option>
+          <option value="Сервис">Сервис</option>
+          <option value="Медиакоммуникация и журналистика">Медиакоммуникация и журналистика</option>
+          <option value="Перевод и переводоведение">Перевод и переводоведение</option>
+          <option value="Русская литература и литературы народов Российской Федерации">Русская литература и литературы народов Российской Федерации</option>
+          <option value="Социальная работа">Социальная работа</option>
+          <option value="Управление в технических системах">Управление в технических системах</option>
+          <option value="Курсы русского языка">Курсы русского языка</option>
+          <option value="Лингвистика">Лингвистика</option>
+          <option value="Журналистика">Журналистика</option>
+          <option value="Математика и механика">Математика и механика</option>
+          <option value="Педагогическая психология, психодиагностика цифровых образовательных сред">Педагогическая психология, психодиагностика цифровых образовательных сред</option>
+          <option value="Биологические науки">Биологические науки</option>
+          <option value="Социальная структура, социальные институты и процессы">Социальная структура, социальные институты и процессы</option>
+          <option value="Прикладная математика">Прикладная математика</option>
+          <option value="Экология и природопользование">Экология и природопользование</option>
+          <option value="Физика и астрономия">Физика и астрономия</option>
+          <option value="Проектирование технологических машин и комплексов">Проектирование технологических машин и комплексов</option>
+          <option value="Педагогическое образование">Педагогическое образование</option>
+          <option value="Образование и педагогические науки">Образование и педагогические науки</option>
+          <option value="Гостиничное дело">Гостиничное дело</option>
+          <option value="Правовое обеспечение национальной безопасности">Правовое обеспечение национальной безопасности</option>
+          <option value="Эксплуатация судовых энергетических установок">Эксплуатация судовых энергетических установок</option>
+          <option value="Международная обменная программа">Международная обменная программа</option>
+          <option value="Дизайн">Дизайн</option>
+          <option value="Торговое дело">Торговое дело</option>
+          <option value="Теория и история искусств">Теория и история искусств</option>
+          <option value="Нефтегазовое дело">Нефтегазовое дело</option>
+          <option value="Подготовка к поступлению в вуз (Экономическое направление)">Подготовка к поступлению в вуз (Экономическое направление)</option>
+          <option value="Всеобщая история (соответствующего периода)">Всеобщая история (соответствующего периода)</option>
+          <option value="Филология">Филология</option>
+          <option value="Машиностроение">Машиностроение</option>
+          <option value="Прикладная информатика">Прикладная информатика</option>
+          <option value="Региональная и отраслевая экономика">Региональная и отраслевая экономика</option>
+          <option value="Эксплуатация транспортно-технологических машин и комплексов">Эксплуатация транспортно-технологических машин и комплексов</option>
+          <option value="Инфокоммуникационные технологии и системы связи">Инфокоммуникационные технологии и системы связи</option>
+          <option value="Строительные конструкции, здания и сооружения">Строительные конструкции, здания и сооружения</option>
+          <option value="Подготовка к поступлению в вуз (Экономическое направление для поступающих в магистратуру)">Подготовка к поступлению в вуз (Экономическое направление для поступающих в магистратуру)</option>
+          <option value="Физика">Физика</option>
+          <option value="Государственное и муниципальное управление">Государственное и муниципальное управление</option>
+          <option value="Зарубежное регионоведение">Зарубежное регионоведение</option>
+          <option value="Строительство и эксплуатация нефтегазопроводов, баз и хранилищ">Строительство и эксплуатация нефтегазопроводов, баз и хранилищ</option>
+          <option value="Литейное производство">Литейное производство</option>
+          <option value="Виды искусства (изобразительное и декоративно-прикладное искусство и архитектура)">Виды искусства (изобразительное и декоративно-прикладное искусство и архитектура)</option>
+          <option value="Педагогическое образование (с двумя профилями подготовки)">Педагогическое образование (с двумя профилями подготовки)</option>
+          <option value="История">История</option>
+          <option value="Курсы русского языка для студентов Северо-восточного сельскохозяйственного университета, КНР">Курсы русского языка для студентов Северо-восточного сельскохозяйственного университета, КНР</option>
+          <option value="Технологии материалов">Технологии материалов</option>
+          <option value="Управление персоналом">Управление персоналом</option>
+          <option value="Системный анализ, управление и обработка информации">Системный анализ, управление и обработка информации</option>
+          <option value="Землекстройство, кадастр и мониторинг земель">Землекстройство, кадастр и мониторинг земель</option>
+          <option value="Публично-правовые (государственно-правовые) науки">Публично-правовые (государственно-правовые) науки</option>
+          <option value="Землеустройство и кадастры">Землеустройство и кадастры</option>
+          <option value="Исторические науки и археология">Исторические науки и археология</option>
+          <option value="Прикладная математика и информатика">Прикладная математика и информатика</option>
+          <option value="Энерго- и ресурсосберегающие процессы в химической технологии, нефтехимии и биотехнологии">Энерго- и ресурсосберегающие процессы в химической технологии, нефтехимии и биотехнологии</option>
+          <option value="Техника и технологии наземного транспорта">Техника и технологии наземного транспорта</option>
+          <option value="Технология транспортных процессов">Технология транспортных процессов</option>
+          <option value="Экология">Экология</option>
+          <option value="Технология лесозаготовительных и деревоперерабатывающих производств">Технология лесозаготовительных и деревоперерабатывающих производств</option>
+          <option value="Подготовка к поступлению в вуз (Техническое направление)">Подготовка к поступлению в вуз (Техническое направление)</option>
+          <option value="Экономика">Экономика</option>
+          <option value="Всеобщая история">Всеобщая история</option>
+          <option value="Социологические науки">Социологические науки</option>
+          <option value="Основания и фундаменты, подземные сооружения">Основания и фундаменты, подземные сооружения</option>
+          <option value="Русский язык. Языки народов России">Русский язык. Языки народов России</option>
+          <option value="Дополнительная образовательная программа. Русский язык.">Дополнительная образовательная программа. Русский язык.</option>
+          <option value="Общая педагогика, история педагогики и образования">Общая педагогика, история педагогики и образования</option>
+          <option value="Наземные транспортно-технологические комплексы">Наземные транспортно-технологические комплексы</option>
+          <option value="Технологии, средства механизации и энергетическое оборудование в сельском, лесном и рыбном хозяйстве">Технологии, средства механизации и энергетическое оборудование в сельском, лесном и рыбном хозяйстве</option>
+          <option value="Технология и оборудование механической и физико-технической обработки">Технология и оборудование механической и физико-технической обработки</option>
+          <option value="Лесоведение, лесоводство, лесные культуры, агролесомелиорация, озеленение, лесная пирология и таксация">Лесоведение, лесоводство, лесные культуры, агролесомелиорация, озеленение, лесная пирология и таксация</option>
+          <option value="Проектирование и строительство дорог, метрополитенов, аэродромов, мостов и транспортных тоннелей">Проектирование и строительство дорог, метрополитенов, аэродромов, мостов и транспортных тоннелей</option>
+          <option value="Туризм">Туризм</option>
+          <option value="Компьютерная безопасность">Компьютерная безопасность</option>
+          <option value="Строительство, эксплуатация, восстановление и техническое прикрытие автомобильных дорог, мостов и тоннелей">Строительство, эксплуатация, восстановление и техническое прикрытие автомобильных дорог, мостов и тоннелей</option>
+          <option value="Декоративно-прикладное искусство и народные промыслы">Декоративно-прикладное искусство и народные промыслы</option>
+          <option value="Математическое моделирование, числовые методы и комплексы программ">Математическое моделирование, числовые методы и комплексы программ</option>
+          <option value="Математика и компьютерные науки">Математика и компьютерные науки</option>
+          <option value="Материаловедение">Материаловедение</option>
+          <option value="Финансы и кредит">Финансы и кредит</option>
+          <option value="Теория и методика профессионального образования">Теория и методика профессионального образования</option>
+          <option value="Реклама и связи с общественностью">Реклама и связи с общественностью</option>
+          <option value="Лесное дело">Лесное дело</option>
+          <option value="Психологические науки">Психологические науки</option>
+          <option value="Экономическая безопасность">Экономическая безопасность</option>
+          <option value="Языкознание и литературоведение">Языкознание и литературоведение</option>
+          <option value="Геология, разведка и разработка полезных ископаемых">Геология, разведка и разработка полезных ископаемых</option>
+          <option value="Ботаника">Ботаника</option>
+          <option value="Эксплуатация автомобильного транспорта">Эксплуатация автомобильного транспорта</option>
+          <option value="Теоретическая физика">Теоретическая физика</option>
+          <option value="Управление качеством продукции. Стандартизация. Организация производства">Управление качеством продукции. Стандартизация. Организация производства</option>
+          <option value="Автомобильный сервис">Автомобильный сервис</option>
+          <option value="Финансы">Финансы</option>
+          <option value="Науки о земле">Науки о земле</option>
+          <option value="Строительство уникальных зданий и сооружений">Строительство уникальных зданий и сооружений</option>
+          <option value="Программная инженерия">Программная инженерия</option>
+          <option value="Математика">Математика</option>
+          <option value="Химическая технология">Химическая технология</option>
+          <option value="Техника и технологии строительства">Техника и технологии строительства</option>
+          <option value="Русский язык как иностранный">Русский язык как иностранный</option>
+          <option value="Стандартизация и метрология">Стандартизация и метрология</option>
+          <option value="Компьютерные и информационные науки">Компьютерные и информационные науки</option>
+          <option value="Подготовка к поступлению в вуз (Гуманитарное направление)">Подготовка к поступлению в вуз (Гуманитарное направление)</option>
+          <option value="Психолого-педагогическое образование">Психолого-педагогическое образование</option>
+          <option value="Социология управления">Социология управления</option>
+          <option value="Теория и история архитектуры, реставрация и реконструкция историко-архитектурного наследия">Теория и история архитектуры, реставрация и реконструкция историко-архитектурного наследия</option>
+          <option value="Горное дело">Горное дело</option>
+          <option value="Дополнительная образовательная программа «Теория и практика межкультурной коммуникации»">Дополнительная образовательная программа «Теория и практика               межкультурной коммуникации»</option>
+          <option value="Технологии, машины и оборудование для лесного хозяйства и переработки древесины">Технологии, машины и оборудование для лесного хозяйства и переработки древесины</option>
+          <option value="Отечественная история">Отечественная история</option>
+          <option value="Дополнительная образовательная программа &quot;Организация приграничнеого сотрудничества между предприятиями РФ и КНР в современных условиях&quot;">Дополнительная образовательная программа "Организация приграничнеого сотрудничества между предприятиями РФ и КНР в современных условиях"</option>
+          <option value="Наземные транспортно-технологические средства и комплексы">Наземные транспортно-технологические средства и комплексы</option>
+          <option value="Стажировка">Стажировка</option>
+          <option value="Подготовка к поступлению в вуз для иностранных граждан">Подготовка к поступлению в вуз для иностранных граждан</option>
+          <option value="Энергетическое машиностроение">Энергетическое машиностроение</option>
+          <option value="Ландшафтная архитектура">Ландшафтная архитектура</option>
+          <option value="Информационные системы и технологии">Информационные системы и технологии</option>
+          <option value="Металлургия">Металлургия</option>
+          <option value="Конструкторско-технологическое обеспечение машиностроительных производств">Конструкторско-технологическое обеспечение машиностроительных производств</option>
+          <option value="Менеджмент">Менеджмент</option>
+          <option value="Подготовка к поступлению в вуз (Гуманитарное направление. Русский язык)">Подготовка к поступлению в вуз (Гуманитарное направление. Русский язык)</option>
+          <option value="Декоративно-прикладное искусство">Декоративно-прикладное искусство</option>
+          <option value="Психология">Психология</option>
+          <option value="Строительство">Строительство</option>
+          <option value="Административное право; административный процесс">Административное право; административный процесс</option>
+          <option value="Технологические машины и оборудование">Технологические машины и оборудование</option>
+        </select>
+      </div>
+      <div class="survey-line">
+        <div class="question">
+          3. Год окончания ТОГУ
+        </div>
+        <select id="year" name="year">
+          <option value="2020">2020</option>
+          <option value="2021">2021</option>
+          <option value="2022">2022</option>
+          <option value="2023">2023</option>
+        </select>
+      </div>
+      <div class="survey-line">
+        <div class="question">
+          4. Ваш возраст
+        </div>
+        <input class="input form-control" id="age" name="age" type="text" required>
+      </div>
+      <div class="survey-line">
+        <div class="question">
+          5. Ваш пол
+        </div>
+        <fieldset id="gender">
+          <input class="radio" id="gender_0" name="gender" type="radio" required value="1"><label for="gender_0"> Мужской</label><br><br>
+          <input class="radio" id="gender_1" name="gender" type="radio" value="2"><label for="gender_1"> Женский</label>
+        </fieldset>
+      </div>
+      <div class="survey-line">
+        <div class="question">
+          6. Форма обучения
+        </div>
+        <fieldset id="learning-form">
+          <input class="radio" id="learning-form_0" name="learning-form" type="radio" required value="1"><label for="learning-form_0"> Очная</label><br><br>
+          <input class="radio" id="learning-form_1" name="learning-form" type="radio" value="2"><label for="learning-form_1"> Очно-заочная</label><br><br>
+          <input class="radio" id="learning-form_2" name="learning-form" type="radio" value="3"><label for="learning-form_2"> Заочная</label>
+        </fieldset>
+      </div>
+      <div class="survey-line">
+        <div class="question">
+          7. В настоящее время вы работаете?
+        </div>
+        <fieldset id="work">
+          <input class="radio" id="work_0" name="work" type="radio" required value="1"><label for="work_0"> Да</label><br><br>
+          <input class="radio" id="work_1" name="work" type="radio" value="2"><label for="work_1"> Нет</label>
+        </fieldset>
+      </div>
+      <div class="survey-line">
+        <div class="question">
+          8. Полное название организации, в которой Вы работаете в настоящее время
+        </div>
+        <input class="input form-control" id="org-name" name="org-name" type="text">
+      </div>
+      <div class="survey-line">
+        <div class="question">
+          9. Организационно-правовая форма организации, в которой Вы работаете?
+        </div>
+        <fieldset id="org-form">
+          <input class="radio" id="org-form_0" name="org-form" type="radio" value="1"><label for="org-form_0"> Государственная</label><br><br>
+          <input class="radio" id="org-form_1" name="org-form" type="radio" value="2"><label for="org-form_1"> Негосударственная</label>
+        </fieldset>
+      </div>
+      <div class="survey-line">
+        <div class="question">
+          10. Вы работаете по специальности/направлению подготовки, полученной в ТОГУ?
+        </div>
+        <fieldset id="spec-work">
+          <input class="radio" id="spec-work_0" name="spec-work" type="radio" value="1"><label for="spec-work_0"> Да</label><br><br>
+          <input class="radio" id="spec-work_1" name="spec-work" type="radio" value="2"><label for="spec-work_1"> Нет</label><br><br>
+          <input class="radio" id="spec-work_2" name="spec-work" type="radio" value="3"><label for="spec-work_2"> По смежной специальности</label>
+        </fieldset>
+      </div>
+      <div class="survey-line">
+        <div class="question">
+          11. Какую должность вы занимаете?
+        </div>
+        <fieldset id="position">
+          <input class="radio" id="position_0" name="position" type="radio" value="1"><label for="position_0"> Руководитель организации</label><br><br>
+          <input class="radio" id="position_1" name="position" type="radio" value="2"><label for="position_1"> Руководитель структурного подразделения</label><br><br>
+          <input class="radio" id="position_2" name="position" type="radio" value="3"><label for="position_2"> Специалист</label><br><br>
+          <input class="radio" id="position_3" name="position" type="radio" value="4"><label for="position_3"> Другую</label>
+        </fieldset>
+      </div>
+      <div class="survey-line">
+        <div class="question">
+          12. Уровень ваших доходов
+        </div>
+        <fieldset id="income-lvl">
+          <input class="radio" id="income-lvl_0" name="income-lvl" type="radio" value="1"><label for="income-lvl_0"> Низкий</label><br><br>
+          <input class="radio" id="income-lvl_1" name="income-lvl" type="radio" value="2"><label for="income-lvl_1"> Ниже среднего</label><br><br>
+          <input class="radio" id="income-lvl_2" name="income-lvl" type="radio" value="3"><label for="income-lvl_2"> Средний</label><br><br>
+          <input class="radio" id="income-lvl_3" name="income-lvl" type="radio" value="4"><label for="income-lvl_3"> Выше среднего</label><br><br>
+          <input class="radio" id="income-lvl_4" name="income-lvl" type="radio" value="5"><label for="income-lvl_4"> Высокий</label>
+        </fieldset>
+      </div>
+      <div class="survey-line">
+        <div class="question">
+          13. Удовлетворены ли вы уровнем полученной в вузе профессиональной подготовки?
+        </div>
+        <fieldset id="satisfaction">
+          <input class="radio" id="satisfaction_0" name="satisfaction" type="radio" required value="1"><label for="satisfaction_0"> Удовлетворен</label><br><br>
+          <input class="radio" id="satisfaction_1" name="satisfaction" type="radio" value="2"><label for="satisfaction_1"> Удовлетворен, но не в полной мере</label><br><br>
+          <input class="radio" id="satisfaction_2" name="satisfaction" type="radio" value="3"><label for="satisfaction_2"> Неудовлетворен</label><br><br>
+          <input class="radio" id="satisfaction_3" name="satisfaction" type="radio" value="4"><label for="satisfaction_3"> Затрудняюсь ответить</label>
+        </fieldset>
+      </div>
+      <div class="survey-line">
+        <div class="question">
+          14. Насколько важны следующие знания, навыки, способности, компетенции для Вашей профессиональной деятельности в настоящем (столбец I)? В какой мере повлиял университет на развитие каждого из нижеперечисленных профессиональных качеств (столбец II)?
+          <i>Выразите свою оценку в баллах: 1 балл - низка оценка, 5 баллов - высокая оценка. Другие значения промежуточные.</i>
+        </div>
+        <table class="survey-table">
+          <thead>
+            <tr>
+              <th>Знания, навыки, способности, компетенции</th>
+              <th>Значение для профессиональной деятельности в настоящем (Столбец I)</th>
+              <th>Влияние университета на развитие качества (Столбец II)</th>
+            </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td></td>
+            <td><b>&nbsp&nbsp1&nbsp&nbsp 2&nbsp&nbsp 3&nbsp&nbsp 4&nbsp&nbsp 5</b></td>
+            <td><b>&nbsp&nbsp1&nbsp&nbsp 2&nbsp&nbsp 3&nbsp&nbsp 4&nbsp&nbsp 5</b></td>
+          </tr>
+          <tr>
+            <td>Общетеоретическая подготовка, базовые знания в различных областях</td>
+            <td><fieldset id="training1_1" class="in-table">&nbsp&nbsp
+              <input class="radio" id="training_1_1_0" name="training1_1" type="radio" required value="1">&nbsp&nbsp
+              <input class="radio" id="training_1_1_1" name="training1_1" type="radio" value="2">&nbsp&nbsp
+              <input class="radio" id="training_1_1_2" name="training1_1" type="radio" value="3">&nbsp&nbsp
+              <input class="radio" id="training_1_1_3" name="training1_1" type="radio" value="4">&nbsp&nbsp
+              <input class="radio" id="training_1_1_4" name="training1_1" type="radio" value="5">
+            </fieldset></td>
+            <td><fieldset id="training1_2" class="in-table">&nbsp&nbsp
+              <input class="radio" id="training_1_2_0" name="training1_2" type="radio" required value="1">&nbsp&nbsp
+              <input class="radio" id="training_1_2_1" name="training1_2" type="radio" value="2">&nbsp&nbsp
+              <input class="radio" id="training_1_2_2" name="training1_2" type="radio" value="3">&nbsp&nbsp
+              <input class="radio" id="training_1_2_3" name="training1_2" type="radio" value="4">&nbsp&nbsp
+              <input class="radio" id="training_1_2_4" name="training1_2" type="radio" value="5">
+            </fieldset></td>
+          </tr>
+          <tr>
+            <td>Хорошая теоретическая подготовка по основам профессиональных знаний</td>
+            <td><fieldset id="training2_1" class="in-table">&nbsp&nbsp
+              <input class="radio" id="training_2_1_0" name="training2_1" type="radio" required value="1">&nbsp&nbsp
+              <input class="radio" id="training_2_1_1" name="training2_1" type="radio" value="2">&nbsp&nbsp
+              <input class="radio" id="training_2_1_2" name="training2_1" type="radio" value="3">&nbsp&nbsp
+              <input class="radio" id="training_2_1_3" name="training2_1" type="radio" value="4">&nbsp&nbsp
+              <input class="radio" id="training_2_1_4" name="training2_1" type="radio" value="5">
+            </fieldset></td>
+            <td><fieldset id="training2_2" class="in-table">&nbsp&nbsp
+              <input class="radio" id="training_2_2_0" name="training2_2" type="radio" required value="1">&nbsp&nbsp
+              <input class="radio" id="training_2_2_1" name="training2_2" type="radio" value="2">&nbsp&nbsp
+              <input class="radio" id="training_2_2_2" name="training2_2" type="radio" value="3">&nbsp&nbsp
+              <input class="radio" id="training_2_2_3" name="training2_2" type="radio" value="4">&nbsp&nbsp
+              <input class="radio" id="training_2_2_4" name="training2_2" type="radio" value="5">
+            </fieldset></td>
+          </tr>
+          <tr>
+            <td>Практические знания, умения, необходимые для профессиональной деятельности</td>
+            <td><fieldset id="training3_1" class="in-table">&nbsp&nbsp
+              <input class="radio" id="training_3_1_0" name="training3_1" type="radio" required value="1">&nbsp&nbsp
+              <input class="radio" id="training_3_1_1" name="training3_1" type="radio" value="2">&nbsp&nbsp
+              <input class="radio" id="training_3_1_2" name="training3_1" type="radio" value="3">&nbsp&nbsp
+              <input class="radio" id="training_3_1_3" name="training3_1" type="radio" value="4">&nbsp&nbsp
+              <input class="radio" id="training_3_1_4" name="training3_1" type="radio" value="5">
+            </fieldset></td>
+            <td><fieldset id="training3_2" class="in-table">&nbsp&nbsp
+              <input class="radio" id="training_3_2_0" name="training3_2" type="radio" required value="1">&nbsp&nbsp
+              <input class="radio" id="training_3_2_1" name="training3_2" type="radio" value="2">&nbsp&nbsp
+              <input class="radio" id="training_3_2_2" name="training3_2" type="radio" value="3">&nbsp&nbsp
+              <input class="radio" id="training_3_2_3" name="training3_2" type="radio" value="4">&nbsp&nbsp
+              <input class="radio" id="training_3_2_4" name="training3_2" type="radio" value="5">
+            </fieldset></td>
+          </tr>
+          <tr>
+            <td>Осведомленность в смежных областях полученной специальности</td>
+            <td><fieldset id="training4_1" class="in-table">&nbsp&nbsp
+              <input class="radio" id="training_4_1_0" name="training4_1" type="radio" required value="1">&nbsp&nbsp
+              <input class="radio" id="training_4_1_1" name="training4_1" type="radio" value="2">&nbsp&nbsp
+              <input class="radio" id="training_4_1_2" name="training4_1" type="radio" value="3">&nbsp&nbsp
+              <input class="radio" id="training_4_1_3" name="training4_1" type="radio" value="4">&nbsp&nbsp
+              <input class="radio" id="training_4_1_4" name="training4_1" type="radio" value="5">
+            </fieldset></td>
+            <td><fieldset id="training4_2" class="in-table">&nbsp&nbsp
+              <input class="radio" id="training_4_2_0" name="training4_2" type="radio" required value="1">&nbsp&nbsp
+              <input class="radio" id="training_4_2_1" name="training4_2" type="radio" value="2">&nbsp&nbsp
+              <input class="radio" id="training_4_2_2" name="training4_2" type="radio" value="3">&nbsp&nbsp
+              <input class="radio" id="training_4_2_3" name="training4_2" type="radio" value="4">&nbsp&nbsp
+              <input class="radio" id="training_4_2_4" name="training4_2" type="radio" value="5">
+            </fieldset></td>
+          </tr>
+          <tr>
+            <td>Письменная и устная коммуникация на родном языке (уровень общей грамотности)</td>
+            <td><fieldset id="training5_1" class="in-table">&nbsp&nbsp
+              <input class="radio" id="training_5_1_0" name="training5_1" type="radio" required value="1">&nbsp&nbsp
+              <input class="radio" id="training_5_1_1" name="training5_1" type="radio" value="2">&nbsp&nbsp
+              <input class="radio" id="training_5_1_2" name="training5_1" type="radio" value="3">&nbsp&nbsp
+              <input class="radio" id="training_5_1_3" name="training5_1" type="radio" value="4">&nbsp&nbsp
+              <input class="radio" id="training_5_1_4" name="training5_1" type="radio" value="5">
+            </fieldset></td>
+            <td><fieldset id="training5_2" class="in-table">&nbsp&nbsp
+              <input class="radio" id="training_5_2_0" name="training5_2" type="radio" required value="1">&nbsp&nbsp
+              <input class="radio" id="training_5_2_1" name="training5_2" type="radio" value="2">&nbsp&nbsp
+              <input class="radio" id="training_5_2_2" name="training5_2" type="radio" value="3">&nbsp&nbsp
+              <input class="radio" id="training_5_2_3" name="training5_2" type="radio" value="4">&nbsp&nbsp
+              <input class="radio" id="training_5_2_4" name="training5_2" type="radio" value="5">
+            </fieldset></td>
+          </tr>
+          <tr>
+            <td>Владение иностранным языком, необходимое для межличностного и профессионального взаимодействия</td>
+            <td><fieldset id="training6_1" class="in-table">&nbsp&nbsp
+              <input class="radio" id="training_6_1_0" name="training6_1" type="radio" required value="1">&nbsp&nbsp
+              <input class="radio" id="training_6_1_1" name="training6_1" type="radio" value="2">&nbsp&nbsp
+              <input class="radio" id="training_6_1_2" name="training6_1" type="radio" value="3">&nbsp&nbsp
+              <input class="radio" id="training_6_1_3" name="training6_1" type="radio" value="4">&nbsp&nbsp
+              <input class="radio" id="training_6_1_4" name="training6_1" type="radio" value="5">
+            </fieldset></td>
+            <td><fieldset id="training6_2" class="in-table">&nbsp&nbsp
+              <input class="radio" id="training_6_2_0" name="training6_2" type="radio" required value="1">&nbsp&nbsp
+              <input class="radio" id="training_6_2_1" name="training6_2" type="radio" value="2">&nbsp&nbsp
+              <input class="radio" id="training_6_2_2" name="training6_2" type="radio" value="3">&nbsp&nbsp
+              <input class="radio" id="training_6_2_3" name="training6_2" type="radio" value="4">&nbsp&nbsp
+              <input class="radio" id="training_6_2_4" name="training6_2" type="radio" value="5">
+            </fieldset></td>
+          </tr>
+          <tr>
+            <td>Навыки управления информацией (владение эффективными методами и средствами сбора, обмена, хранения и обработки инмормации, в т.ч. на компьютере)</td>
+            <td><fieldset id="training7_1" class="in-table">&nbsp&nbsp
+              <input class="radio" id="training_7_1_0" name="training7_1" type="radio" required value="1">&nbsp&nbsp
+              <input class="radio" id="training_7_1_1" name="training7_1" type="radio" value="2">&nbsp&nbsp
+              <input class="radio" id="training_7_1_2" name="training7_1" type="radio" value="3">&nbsp&nbsp
+              <input class="radio" id="training_7_1_3" name="training7_1" type="radio" value="4">&nbsp&nbsp
+              <input class="radio" id="training_7_1_4" name="training7_1" type="radio" value="5">
+            </fieldset></td>
+            <td><fieldset id="training7_2" class="in-table">&nbsp&nbsp
+              <input class="radio" id="training_7_2_0" name="training7_2" type="radio" required value="1">&nbsp&nbsp
+              <input class="radio" id="training_7_2_1" name="training7_2" type="radio" value="2">&nbsp&nbsp
+              <input class="radio" id="training_7_2_2" name="training7_2" type="radio" value="3">&nbsp&nbsp
+              <input class="radio" id="training_7_2_3" name="training7_2" type="radio" value="4">&nbsp&nbsp
+              <input class="radio" id="training_7_2_4" name="training7_2" type="radio" value="5">
+            </fieldset></td>
+          </tr>
+          <tr>
+            <td>Способность приобретать новые профессиональные знания, воспринимать и анализировать новую информацию, развивать новые идеи</td>
+            <td><fieldset id="training8_1" class="in-table">&nbsp&nbsp
+              <input class="radio" id="training_8_1_0" name="training8_1" type="radio" required value="1">&nbsp&nbsp
+              <input class="radio" id="training_8_1_1" name="training8_1" type="radio" value="2">&nbsp&nbsp
+              <input class="radio" id="training_8_1_2" name="training8_1" type="radio" value="3">&nbsp&nbsp
+              <input class="radio" id="training_8_1_3" name="training8_1" type="radio" value="4">&nbsp&nbsp
+              <input class="radio" id="training_8_1_4" name="training8_1" type="radio" value="5">
+            </fieldset></td>
+            <td><fieldset id="training8_2" class="in-table">&nbsp&nbsp
+              <input class="radio" id="training_8_2_0" name="training8_2" type="radio" required value="1">&nbsp&nbsp
+              <input class="radio" id="training_8_2_1" name="training8_2" type="radio" value="2">&nbsp&nbsp
+              <input class="radio" id="training_8_2_2" name="training8_2" type="radio" value="3">&nbsp&nbsp
+              <input class="radio" id="training_8_2_3" name="training8_2" type="radio" value="4">&nbsp&nbsp
+              <input class="radio" id="training_8_2_4" name="training8_2" type="radio" value="5">
+            </fieldset></td>
+          </tr>
+          <tr>
+            <td>Способность к обобщению, анализу и синтезу, постановке целей и выбору путей их решения</td>
+            <td><fieldset id="training9_1" class="in-table">&nbsp&nbsp
+              <input class="radio" id="training_9_1_0" name="training9_1" type="radio" required value="1">&nbsp&nbsp
+              <input class="radio" id="training_9_1_1" name="training9_1" type="radio" value="2">&nbsp&nbsp
+              <input class="radio" id="training_9_1_2" name="training9_1" type="radio" value="3">&nbsp&nbsp
+              <input class="radio" id="training_9_1_3" name="training9_1" type="radio" value="4">&nbsp&nbsp
+              <input class="radio" id="training_9_1_4" name="training9_1" type="radio" value="5">
+            </fieldset></td>
+            <td><fieldset id="training9_2" class="in-table">&nbsp&nbsp
+              <input class="radio" id="training_9_2_0" name="training9_2" type="radio" required value="1">&nbsp&nbsp
+              <input class="radio" id="training_9_2_1" name="training9_2" type="radio" value="2">&nbsp&nbsp
+              <input class="radio" id="training_9_2_2" name="training9_2" type="radio" value="3">&nbsp&nbsp
+              <input class="radio" id="training_9_2_3" name="training9_2" type="radio" value="4">&nbsp&nbsp
+              <input class="radio" id="training_9_2_4" name="training9_2" type="radio" value="5">
+            </fieldset></td>
+          </tr>
+          <tr>
+            <td>Навыки работы на компьютере, знание необходимых в работе профессиональных программ</td>
+            <td><fieldset id="training10_1" class="in-table">&nbsp&nbsp
+              <input class="radio" id="training_10_1_0" name="training10_1" type="radio" required value="1">&nbsp&nbsp
+              <input class="radio" id="training_10_1_1" name="training10_1" type="radio" value="2">&nbsp&nbsp
+              <input class="radio" id="training_10_1_2" name="training10_1" type="radio" value="3">&nbsp&nbsp
+              <input class="radio" id="training_10_1_3" name="training10_1" type="radio" value="4">&nbsp&nbsp
+              <input class="radio" id="training_10_1_4" name="training10_1" type="radio" value="5">
+            </fieldset></td>
+            <td><fieldset id="training10_2" class="in-table">&nbsp&nbsp
+              <input class="radio" id="training_10_2_0" name="training10_2" type="radio" required value="1">&nbsp&nbsp
+              <input class="radio" id="training_10_2_1" name="training10_2" type="radio" value="2">&nbsp&nbsp
+              <input class="radio" id="training_10_2_2" name="training10_2" type="radio" value="3">&nbsp&nbsp
+              <input class="radio" id="training_10_2_3" name="training10_2" type="radio" value="4">&nbsp&nbsp
+              <input class="radio" id="training_10_2_4" name="training10_2" type="radio" value="5">
+            </fieldset></td>
+          </tr>
+          <tr>
+            <td>Способность работать в коллективе, команде</td>
+            <td><fieldset id="training11_1" class="in-table">&nbsp&nbsp
+              <input class="radio" id="training_11_1_0" name="training11_1" type="radio" required value="1">&nbsp&nbsp
+              <input class="radio" id="training_11_1_1" name="training11_1" type="radio" value="2">&nbsp&nbsp
+              <input class="radio" id="training_11_1_2" name="training11_1" type="radio" value="3">&nbsp&nbsp
+              <input class="radio" id="training_11_1_3" name="training11_1" type="radio" value="4">&nbsp&nbsp
+              <input class="radio" id="training_11_1_4" name="training11_1" type="radio" value="5">
+            </fieldset></td>
+            <td><fieldset id="training11_2" class="in-table">&nbsp&nbsp
+              <input class="radio" id="training_11_2_0" name="training11_2" type="radio" required value="1">&nbsp&nbsp
+              <input class="radio" id="training_11_2_1" name="training11_2" type="radio" value="2">&nbsp&nbsp
+              <input class="radio" id="training_11_2_2" name="training11_2" type="radio" value="3">&nbsp&nbsp
+              <input class="radio" id="training_11_2_3" name="training11_2" type="radio" value="4">&nbsp&nbsp
+              <input class="radio" id="training_11_2_4" name="training11_2" type="radio" value="5">
+            </fieldset></td>
+          </tr>
+          <tr>
+            <td>Способность к самоорганизации и самообразованию, стремление к дальнейшему профессиональному развитию</td>
+            <td><fieldset id="training12_1" class="in-table">&nbsp&nbsp
+              <input class="radio" id="training_12_1_0" name="training12_1" type="radio" required value="1">&nbsp&nbsp
+              <input class="radio" id="training_12_1_1" name="training12_1" type="radio" value="2">&nbsp&nbsp
+              <input class="radio" id="training_12_1_2" name="training12_1" type="radio" value="3">&nbsp&nbsp
+              <input class="radio" id="training_12_1_3" name="training12_1" type="radio" value="4">&nbsp&nbsp
+              <input class="radio" id="training_12_1_4" name="training12_1" type="radio" value="5">
+            </fieldset></td>
+            <td><fieldset id="training12_2" class="in-table">&nbsp&nbsp
+              <input class="radio" id="training_12_2_0" name="training12_2" type="radio" required value="1">&nbsp&nbsp
+              <input class="radio" id="training_12_2_1" name="training12_2" type="radio" value="2">&nbsp&nbsp
+              <input class="radio" id="training_12_2_2" name="training12_2" type="radio" value="3">&nbsp&nbsp
+              <input class="radio" id="training_12_2_3" name="training12_2" type="radio" value="4">&nbsp&nbsp
+              <input class="radio" id="training_12_2_4" name="training12_2" type="radio" value="5">
+            </fieldset></td>
+          </tr>
+          <tr>
+            <td>Способность решать стандартные задачи профессиональной деятельности, эффективно представлять себя и результаты своего труда</td>
+            <td><fieldset id="training13_1" class="in-table">&nbsp&nbsp
+              <input class="radio" id="training_13_1_0" name="training13_1" type="radio" required value="1">&nbsp&nbsp
+              <input class="radio" id="training_13_1_1" name="training13_1" type="radio" value="2">&nbsp&nbsp
+              <input class="radio" id="training_13_1_2" name="training13_1" type="radio" value="3">&nbsp&nbsp
+              <input class="radio" id="training_13_1_3" name="training13_1" type="radio" value="4">&nbsp&nbsp
+              <input class="radio" id="training_13_1_4" name="training13_1" type="radio" value="5">
+            </fieldset></td>
+            <td><fieldset id="training13_2" class="in-table">&nbsp&nbsp
+              <input class="radio" id="training_13_2_0" name="training13_2" type="radio" required value="1">&nbsp&nbsp
+              <input class="radio" id="training_13_2_1" name="training13_2" type="radio" value="2">&nbsp&nbsp
+              <input class="radio" id="training_13_2_2" name="training13_2" type="radio" value="3">&nbsp&nbsp
+              <input class="radio" id="training_13_2_3" name="training13_2" type="radio" value="4">&nbsp&nbsp
+              <input class="radio" id="training_13_2_4" name="training13_2" type="radio" value="5">
+            </fieldset></td>
+          </tr>
+          <tr>
+            <td>Способность находить нестандартные решения типовых задач или умение решать нестандартные профессиональные задачи</td>
+            <td><fieldset id="training14_1" class="in-table">&nbsp&nbsp
+              <input class="radio" id="training_14_1_0" name="training14_1" type="radio" required value="1">&nbsp&nbsp
+              <input class="radio" id="training_14_1_1" name="training14_1" type="radio" value="2">&nbsp&nbsp
+              <input class="radio" id="training_14_1_2" name="training14_1" type="radio" value="3">&nbsp&nbsp
+              <input class="radio" id="training_14_1_3" name="training14_1" type="radio" value="4">&nbsp&nbsp
+              <input class="radio" id="training_14_1_4" name="training14_1" type="radio" value="5">
+            </fieldset></td>
+            <td><fieldset id="training14_2" class="in-table">&nbsp&nbsp
+              <input class="radio" id="training_14_2_0" name="training14_2" type="radio" required value="1">&nbsp&nbsp
+              <input class="radio" id="training_14_2_1" name="training14_2" type="radio" value="2">&nbsp&nbsp
+              <input class="radio" id="training_14_2_2" name="training14_2" type="radio" value="3">&nbsp&nbsp
+              <input class="radio" id="training_14_2_3" name="training14_2" type="radio" value="4">&nbsp&nbsp
+              <input class="radio" id="training_14_2_4" name="training14_2" type="radio" value="5">
+            </fieldset></td>
+          </tr>
+          <tr>
+            <td>Способность к проектной деятельность в профессиональной сфере</td>
+            <td><fieldset id="training15_1" class="in-table">&nbsp&nbsp
+              <input class="radio" id="training_15_1_0" name="training15_1" type="radio" required value="1">&nbsp&nbsp
+              <input class="radio" id="training_15_1_1" name="training15_1" type="radio" value="2">&nbsp&nbsp
+              <input class="radio" id="training_15_1_2" name="training15_1" type="radio" value="3">&nbsp&nbsp
+              <input class="radio" id="training_15_1_3" name="training15_1" type="radio" value="4">&nbsp&nbsp
+              <input class="radio" id="training_15_1_4" name="training15_1" type="radio" value="5">
+            </fieldset></td>
+            <td><fieldset id="training15_2" class="in-table">&nbsp&nbsp
+              <input class="radio" id="training_15_2_0" name="training15_2" type="radio" required value="1">&nbsp&nbsp
+              <input class="radio" id="training_15_2_1" name="training15_2" type="radio" value="2">&nbsp&nbsp
+              <input class="radio" id="training_15_2_2" name="training15_2" type="radio" value="3">&nbsp&nbsp
+              <input class="radio" id="training_15_2_3" name="training15_2" type="radio" value="4">&nbsp&nbsp
+              <input class="radio" id="training_15_2_4" name="training15_2" type="radio" value="5">
+            </fieldset></td>
+          </tr>
+          <tr>
+            <td>Готовность к самостоятельной работе, нацеленность на конечный результат</td>
+            <td><fieldset id="training16_1" class="in-table">&nbsp&nbsp
+              <input class="radio" id="training_16_1_0" name="training16_1" type="radio" required value="1">&nbsp&nbsp
+              <input class="radio" id="training_16_1_1" name="training16_1" type="radio" value="2">&nbsp&nbsp
+              <input class="radio" id="training_16_1_2" name="training16_1" type="radio" value="3">&nbsp&nbsp
+              <input class="radio" id="training_16_1_3" name="training16_1" type="radio" value="4">&nbsp&nbsp
+              <input class="radio" id="training_16_1_4" name="training16_1" type="radio" value="5">
+            </fieldset></td>
+            <td><fieldset id="training16_2" class="in-table">&nbsp&nbsp
+              <input class="radio" id="training_16_2_0" name="training16_2" type="radio" required value="1">&nbsp&nbsp
+              <input class="radio" id="training_16_2_1" name="training16_2" type="radio" value="2">&nbsp&nbsp
+              <input class="radio" id="training_16_2_2" name="training16_2" type="radio" value="3">&nbsp&nbsp
+              <input class="radio" id="training_16_2_3" name="training16_2" type="radio" value="4">&nbsp&nbsp
+              <input class="radio" id="training_16_2_4" name="training16_2" type="radio" value="5">
+            </fieldset></td>
+          </tr>
+          <tr>
+            <td>Способность находить организационно-управленческие решения в профессиональной деятельности и готовность нести за них ответственность</td>
+            <td><fieldset id="training17_1" class="in-table">&nbsp&nbsp
+              <input class="radio" id="training_17_1_0" name="training17_1" type="radio" required value="1">&nbsp&nbsp
+              <input class="radio" id="training_17_1_1" name="training17_1" type="radio" value="2">&nbsp&nbsp
+              <input class="radio" id="training_17_1_2" name="training17_1" type="radio" value="3">&nbsp&nbsp
+              <input class="radio" id="training_17_1_3" name="training17_1" type="radio" value="4">&nbsp&nbsp
+              <input class="radio" id="training_17_1_4" name="training17_1" type="radio" value="5">
+            </fieldset></td>
+            <td><fieldset id="training17_2" class="in-table">&nbsp&nbsp
+              <input class="radio" id="training_17_2_0" name="training17_2" type="radio" required value="1">&nbsp&nbsp
+              <input class="radio" id="training_17_2_1" name="training17_2" type="radio" value="2">&nbsp&nbsp
+              <input class="radio" id="training_17_2_2" name="training17_2" type="radio" value="3">&nbsp&nbsp
+              <input class="radio" id="training_17_2_3" name="training17_2" type="radio" value="4">&nbsp&nbsp
+              <input class="radio" id="training_17_2_4" name="training17_2" type="radio" value="5">
+            </fieldset></td>
+          </tr>
+          <tr>
+            <td>Умение использовать нормативно правовые документы в профессиональной деятельности</td>
+            <td><fieldset id="training18_1" class="in-table">&nbsp&nbsp
+              <input class="radio" id="training_18_1_0" name="training18_1" type="radio" required value="1">&nbsp&nbsp
+              <input class="radio" id="training_18_1_1" name="training18_1" type="radio" value="2">&nbsp&nbsp
+              <input class="radio" id="training_18_1_2" name="training18_1" type="radio" value="3">&nbsp&nbsp
+              <input class="radio" id="training_18_1_3" name="training18_1" type="radio" value="4">&nbsp&nbsp
+              <input class="radio" id="training_18_1_4" name="training18_1" type="radio" value="5">
+            </fieldset></td>
+            <td><fieldset id="training18_2" class="in-table">&nbsp&nbsp
+              <input class="radio" id="training_18_2_0" name="training18_2" type="radio" required value="1">&nbsp&nbsp
+              <input class="radio" id="training_18_2_1" name="training18_2" type="radio" value="2">&nbsp&nbsp
+              <input class="radio" id="training_18_2_2" name="training18_2" type="radio" value="3">&nbsp&nbsp
+              <input class="radio" id="training_18_2_3" name="training18_2" type="radio" value="4">&nbsp&nbsp
+              <input class="radio" id="training_18_2_4" name="training18_2" type="radio" value="5">
+            </fieldset></td>
+          </tr>
+          <tr>
+            <td>Инициативность и пердприимчивость в работе</td>
+            <td><fieldset id="training19_1" class="in-table">&nbsp&nbsp
+              <input class="radio" id="training_19_1_0" name="training19_1" type="radio" required value="1">&nbsp&nbsp
+              <input class="radio" id="training_19_1_1" name="training19_1" type="radio" value="2">&nbsp&nbsp
+              <input class="radio" id="training_19_1_2" name="training19_1" type="radio" value="3">&nbsp&nbsp
+              <input class="radio" id="training_19_1_3" name="training19_1" type="radio" value="4">&nbsp&nbsp
+              <input class="radio" id="training_19_1_4" name="training19_1" type="radio" value="5">
+            </fieldset></td>
+            <td><fieldset id="training19_2" class="in-table">&nbsp&nbsp
+              <input class="radio" id="training_19_2_0" name="training19_2" type="radio" required value="1">&nbsp&nbsp
+              <input class="radio" id="training_19_2_1" name="training19_2" type="radio" value="2">&nbsp&nbsp
+              <input class="radio" id="training_19_2_2" name="training19_2" type="radio" value="3">&nbsp&nbsp
+              <input class="radio" id="training_19_2_3" name="training19_2" type="radio" value="4">&nbsp&nbsp
+              <input class="radio" id="training_19_2_4" name="training19_2" type="radio" value="5">
+            </fieldset></td>
+          </tr>
+          <tr>
+            <td>Способность к организации и планированию</td>
+            <td><fieldset id="training20_1" class="in-table">&nbsp&nbsp
+              <input class="radio" id="training_20_1_0" name="training20_1" type="radio" required value="1">&nbsp&nbsp
+              <input class="radio" id="training_20_1_1" name="training20_1" type="radio" value="2">&nbsp&nbsp
+              <input class="radio" id="training_20_1_2" name="training20_1" type="radio" value="3">&nbsp&nbsp
+              <input class="radio" id="training_20_1_3" name="training20_1" type="radio" value="4">&nbsp&nbsp
+              <input class="radio" id="training_20_1_4" name="training20_1" type="radio" value="5">
+            </fieldset></td>
+            <td><fieldset id="training20_2" class="in-table">&nbsp&nbsp
+              <input class="radio" id="training_20_2_0" name="training20_2" type="radio" required value="1">&nbsp&nbsp
+              <input class="radio" id="training_20_2_1" name="training20_2" type="radio" value="2">&nbsp&nbsp
+              <input class="radio" id="training_20_2_2" name="training20_2" type="radio" value="3">&nbsp&nbsp
+              <input class="radio" id="training_20_2_3" name="training20_2" type="radio" value="4">&nbsp&nbsp
+              <input class="radio" id="training_20_2_4" name="training20_2" type="radio" value="5">
+            </fieldset></td>
+          </tr>
+          <tr>
+            <td>Нацеленность на карьерный рост</td>
+            <td><fieldset id="training21_1" class="in-table">&nbsp&nbsp
+              <input class="radio" id="training_21_1_0" name="training21_1" type="radio" required value="1">&nbsp&nbsp
+              <input class="radio" id="training_21_1_1" name="training21_1" type="radio" value="2">&nbsp&nbsp
+              <input class="radio" id="training_21_1_2" name="training21_1" type="radio" value="3">&nbsp&nbsp
+              <input class="radio" id="training_21_1_3" name="training21_1" type="radio" value="4">&nbsp&nbsp
+              <input class="radio" id="training_21_1_4" name="training21_1" type="radio" value="5">
+            </fieldset></td>
+            <td><fieldset id="training21_2" class="in-table">&nbsp&nbsp
+              <input class="radio" id="training_21_2_0" name="training21_2" type="radio" required value="1">&nbsp&nbsp
+              <input class="radio" id="training_21_2_1" name="training21_2" type="radio" value="2">&nbsp&nbsp
+              <input class="radio" id="training_21_2_2" name="training21_2" type="radio" value="3">&nbsp&nbsp
+              <input class="radio" id="training_21_2_3" name="training21_2" type="radio" value="4">&nbsp&nbsp
+              <input class="radio" id="training_21_2_4" name="training21_2" type="radio" value="5">
+            </fieldset></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="survey-line">
+        <div class="question">
+          15. С какими трудностями Вы столкнулись при поиске рабочего места? (возможно несколько вариантов ответа)
+        </div>
+        <div id="difficulties" class="options">
+          <input class="checkbox" id="difficulties_0" type="checkbox" value="1"><label for="difficulties_0"> По моей специальности/направлению подготовки предлагали мало мест</label><br><br>
+          <input class="checkbox" id="difficulties_1" type="checkbox" value="2"><label for="difficulties_1"> Требовались знания, которых у меня не было</label><br><br>
+          <input class="checkbox" id="difficulties_2" type="checkbox" value="3"><label for="difficulties_2"> Предлагаемые места не соответствовали профилю моей подготовки</label><br><br>
+          <input class="checkbox" id="difficulties_3" type="checkbox" value="4"><label for="difficulties_3"> Требовался другой уровень высшего образования(специалист, магистр)</label><br><br>
+          <input class="checkbox" id="difficulties_4" type="checkbox" value="5"><label for="difficulties_4"> Требовались выпускники, имеющие другую специализацию</label><br><br>
+          <input class="checkbox" id="difficulties_5" type="checkbox" value="6"><label for="difficulties_5"> Были затребованы компетенции, которыми я не обладаю</label>
+        </div>
+        <div class="wrong" id="wrong">
+          <img src="img/svg/error.svg">&nbsp&nbsp
+          Пожалуйста, выберите хотя бы один фактор
+        </div>
+      </div>
+      <div class="survey-line">
+        <div class="question">
+          16. Как Вы оцениваете Ваши профессиональные перспективы в будущем?
+        </div>
+        <fieldset id="perspectives">
+          <input class="radio" id="perspectives_0" name="perspectives" type="radio" required value="1"><label for="perspectives_0"> Очень плохо</label><br><br>
+          <input class="radio" id="perspectives_1" name="perspectives" type="radio" value="2"><label for="perspectives_1"> Плохо</label><br><br>
+          <input class="radio" id="perspectives_2" name="perspectives" type="radio" value="3"><label for="perspectives_2"> Нейтрально</label><br><br>
+          <input class="radio" id="perspectives_3" name="perspectives" type="radio" value="4"><label for="perspectives_3"> Хорошо</label><br><br>
+          <input class="radio" id="perspectives_4" name="perspectives" type="radio" value="5"><label for="perspectives_4"> Очень хорошо</label>
+        </fieldset>
+      </div>
+      <div class="survey-line">
+        <div class="question">
+          17. Если бы Вам пришлось выбирать специальность и образовательную организацию заново, как бы Вы поступили?
+        </div>
+        <fieldset id="new-speciality">
+          <input class="radio" id="new-speciality_0" name="new-speciality" type="radio" required value="1"><label for="new-speciality_0"> Выбрал бы другую специальность и другую образовательную организацию</label><br><br>
+          <input class="radio" id="new-speciality_1" name="new-speciality" type="radio" value="2"><label for="new-speciality_1"> Выбрал бы другую специальность/направление подготовки, но в ТОГУ</label><br><br>
+          <input class="radio" id="new-speciality_2" name="new-speciality" type="radio" value="3"><label for="new-speciality_2"> Выбрал бы эту же специальность/направление подготовки, но в другой образовательной организации</label><br><br>
+          <input class="radio" id="new-speciality_3" name="new-speciality" type="radio" value="4"><label for="new-speciality_3"> Выбрал эте же специальность/направление подготовки в ТОГУ</label><br><br>
+          <input class="radio" id="new-speciality_4" name="new-speciality" type="radio" value="5"><label for="new-speciality_4"> Затрудняюсь ответить</label>
+        </fieldset>
+      </div>
+
+      <div class="survey-line">
+        <div class="question">
+          Ф.И.О. выпускника
+        </div>
+        <input class="input form-control" id="full_name" name="full_name" type="text" required>
+      </div>
+
+      <div class="check">
+        <label for="agreement"><input class="checkbox" id="agreement" name="agreement" type="checkbox" required><small> Даю согласие на использование информации обо мне только для составления закрытой Базы данных социологического опроса выпускников университета о качестве подготовки и значимости профессиональных качеств, сформированных за время обучения в вузе для профессиональной деятельности молодого специалиста. </small></label>
+      </div>
+
+      <div class="buttons">
+        <input class="button blue" id="submit" type="submit" value="Сохранить">
+      </div>
+    </form>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <span class="contacts">
+        8 (4212) 76-17-25
+        <br>
+        +7 (914) 414-33-79 (WhatsApp)
+        <br>
+        start-k@pnu.edu.ru
+      </span>
+      <img alt="pnu-logo" src="img/logo.png"/>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
