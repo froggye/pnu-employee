@@ -72,15 +72,15 @@
     <h4>База вакансий</h4>
   </div>
   <div class="container">
-    <div class="search">
+    <form id="search" class="search">
       <input type="search" id="vacancy-search" class="input" placeholder="Найти">
       <button class="search-button"><img src="img/svg/search.svg"></button>
-    </div>
+    </form>
 
   </div>
 
   <div class="container">
-    <div class="filter-buttons">
+    <div>
       <!--TODO: добавить проверку на вход в личный кабинет-->
       <a class="button" href="vacancy-account-add.html"><button class="button blue" type="button">Оставить вакансию</button></a>&nbsp;&nbsp;
       <a class="button" href="https://portal.pnu.edu.ru/student_office/resume/"><button class="button blue" type="button">Разместить резюме</button></a>
@@ -99,7 +99,7 @@
             <p><small>31.03.2023&nbsp;03:03</small></p>
           </div>
           <div class="card-title">
-            <a><h5>Наименование вакансии</h5></a>
+            <a href="vacancy-id.html"><h5>Наименование вакансии</h5></a>
             <h6>Уровень з/п</h6>
             <p>Место работы &bull; Полный рабочий день &bull; Занятость: ---</p>
           </div>
@@ -119,7 +119,67 @@
             <p><small>31.03.2023&nbsp;03:03</small></p>
           </div>
           <div class="card-title">
-            <a><h5>Наименование вакансии</h5></a>
+            <a href="vacancy-id.html"><h5>Наименование вакансии</h5></a>
+            <h6>Уровень з/п</h6>
+            <p>Место работы &bull; Полный рабочий день &bull; Занятость: ---</p>
+          </div>
+          <div class="card-description">
+            <p>Основные обязанности</p>
+          </div>
+
+        </div>
+      </div>
+      <div class="vacancy-card">
+        <div class="card-image">
+          <img src="img/placeholder-img.png">
+        </div>
+        <div class="card-body">
+          <div class="card-head">
+            <h6>Название организации</h6>
+            <p><small>31.03.2023&nbsp;03:03</small></p>
+          </div>
+          <div class="card-title">
+            <a href="vacancy-id.html"><h5>Наименование вакансии</h5></a>
+            <h6>Уровень з/п</h6>
+            <p>Место работы &bull; Полный рабочий день &bull; Занятость: ---</p>
+          </div>
+          <div class="card-description">
+            <p>Основные обязанности</p>
+          </div>
+
+        </div>
+      </div>
+      <div class="vacancy-card">
+        <div class="card-image">
+          <img src="img/placeholder-img.png">
+        </div>
+        <div class="card-body">
+          <div class="card-head">
+            <h6>Название организации</h6>
+            <p><small>31.03.2023&nbsp;03:03</small></p>
+          </div>
+          <div class="card-title">
+            <a href="vacancy-id.html"><h5>Наименование вакансии</h5></a>
+            <h6>Уровень з/п</h6>
+            <p>Место работы &bull; Полный рабочий день &bull; Занятость: ---</p>
+          </div>
+          <div class="card-description">
+            <p>Основные обязанности</p>
+          </div>
+
+        </div>
+      </div>
+      <div class="vacancy-card">
+        <div class="card-image">
+          <img src="img/placeholder-img.png">
+        </div>
+        <div class="card-body">
+          <div class="card-head">
+            <h6>Название организации</h6>
+            <p><small>31.03.2023&nbsp;03:03</small></p>
+          </div>
+          <div class="card-title">
+            <a href="vacancy-id.html"><h5>Наименование вакансии</h5></a>
             <h6>Уровень з/п</h6>
             <p>Место работы &bull; Полный рабочий день &bull; Занятость: ---</p>
           </div>
@@ -132,20 +192,15 @@
     </div>
   </div>
   <div class="container">
-    <div class="list-pages">
-      <ul class="pages">
-        <li class="disabled"><span>‹‹</span></li>
-        <li class="active"><span class="current-page">1</span></li>
-        <li><a class="page" href="">2</a></li>
-        <li><a class="page" href="">3</a></li>
-        <li><a class="page" href="">4</a></li>
-        <li class="disabled"><span>...</span></li>
-        <li><a class="page" href="">60</a></li>
-        <li><a class="page" href="">61</a></li>
-        <li><a class="page" href="">62</a></li>
-        <li><a class="page" href="">63</a></li>
-        <li><a class="page" href="">››</a></li>
-      </ul>
+    <div class="pagination">
+        <a class="inactive">&laquo;</a>
+        <a class="active">1</a>
+        <a href="">2</a>
+        <a href="">3</a>
+        <a href="">4</a>
+        <a class="inactive">...</a>
+        <a href="">60</a>
+        <a href="">&raquo;</a>
     </div>
   </div>
 </main>

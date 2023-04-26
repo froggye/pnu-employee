@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>База вакансий</title>
+  <link rel="stylesheet" href="css/styles-main.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/info-id.css">
+  <script type="text/javascript" src="js/burger.js" async></script>
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <div class="header-top">
+        <!--<div class="pnu-logo">-->
+        <img alt="pnu-logo" src="img/logo.png"/>
+        <span class="pnu-name">
+                            ТИХООКЕАНСКИЙ <br>ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ
+                        </span>
+        <!--</div>-->
+        <div class="login">
+          <a class="login-link" href="login.html">
+            <table><tr>
+              <td>
+                <img src="img/UserOutline.png"></img>
+              </td>
+              <td>
+                Личный кабинет
+              </td>
+            </tr></table>
+          </a>
+        </div>
+      </div>
+      <div class="header-title">
+        <h1>Трудоустройство</h1>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<nav class="menu">
+  <div class="container">
+    <div class="nav-menu" id="nav-list">
+      <div class="hamburger-top">
+        <div class="hamburger-title">База вакансий</div>
+        <div class="hamburger-icon" onclick="OpenBurger()">
+          <!--<i class="fa fa-bars"></i>-->
+          <div class="hamburger-bar"></div>
+          <div class="hamburger-bar"></div>
+          <div class="hamburger-bar"></div>
+        </div>
+      </div>
+      <ul class="nav-menu-list">
+        <a href="index.html" class="menu-link"><li class="menu-item">Главная</li></a>
+        <a href="login.html" class="menu-link"><li class="menu-item menu-login">Личный кабинет</li></a>
+        <a href="resume-search.html" class="menu-link"><li class="menu-item">Поиск резюме</li></a>
+        <a href="vacancy-list.html" class="menu-link"><li class="menu-item">База вакансий</li></a>
+        <a href="survey-employ.html" class="menu-link"><li class="menu-item">Анкета работодателя</li></a>
+        <a href="survey-student.html" class="menu-link"><li class="menu-item">Анкета выпускника</li></a>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="body">
+  <div class="container">
+    <div class="back">
+      <a href="javascript:history.back()">‹ Назад</a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="info">
+      <h4 id="name-here">Наименование вакансии</h4>
+      <div class="cards">
+
+        <div class="info-card">
+          <h5>Информация о заказчике</h5>
+          <div class="info-card-text">
+            <div class="info-line">
+              <div class="info-label">Название организации</div>
+              <div class="info-text">
+                Название
+              </div>
+            </div>
+            <div class="info-line">
+              <div class="info-label">Основные направления деятельности</div>
+              <div class="info-text">
+                Описание
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h5>Описание вакансии</h5>
+          <div class="info-card-text">
+            <div class="info-line">
+              <div class="info-label">Наименование вакансии</div>
+              <div class="info-text">
+                Наименование
+              </div>
+            </div>
+            <div class="info-line">
+              <div class="info-label">Отдел (под<wbr>раз<wbr>де<wbr>ле<wbr>ние)</div>
+              <div class="info-text">
+                Отдел
+              </div>
+            </div>
+            <div class="info-line">
+              <div class="info-label">Основные обязанности</div>
+              <div class="info-text">
+                Описание
+              </div>
+            </div>
+            <div class="info-line">
+              <div class="info-label">Вид работы</div>
+              <div class="info-text">
+                Постоянная
+              </div>
+            </div>
+            <div class="info-line">
+              <div class="info-label">График работы</div>
+              <div class="info-text">
+                Свободный
+              </div>
+            </div>
+            <div class="info-line">
+              <div class="info-label">Командировки</div>
+              <div class="info-text">
+                -
+              </div>
+            </div>
+            <div class="info-line">
+              <div class="info-label">Перспективы служебного роста</div>
+              <div class="info-text">
+                Описание
+              </div>
+            </div>
+            <div class="info-line">
+              <div class="info-label">Уровень з/п</div>
+              <div class="info-text">
+                Описание
+              </div>
+            </div>
+            <div class="info-line">
+              <div class="info-label">Место работы</div>
+              <div class="info-text">
+                Описание
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h5>Требования к кандидату</h5>
+          <div class="info-card-text">
+            <div class="info-line">
+              <div class="info-label">Пол</div>
+              <div class="info-text">
+                -
+              </div>
+            </div>
+            <div class="info-line">
+              <div class="info-label">Возрастное ограничение</div>
+              <div class="info-text">
+                -
+              </div>
+            </div>
+            <div class="info-line">
+              <div class="info-label">Семейное положение</div>
+              <div class="info-text">
+                -
+              </div>
+            </div>
+            <div class="info-line">
+              <div class="info-label">Образование</div>
+              <div class="info-text">
+                Описание
+              </div>
+            </div>
+            <div class="info-line">
+              <div class="info-label">Пред<wbr>поч<wbr>ти<wbr>тель<wbr>ная специальность</div>
+              <div class="info-text">
+                Описание
+              </div>
+            </div>
+            <div class="info-line">
+              <div class="info-label">Опыт работы</div>
+              <div class="info-text">
+                Описание
+              </div>
+            </div>
+            <div class="info-line">
+              <div class="info-label">Знания, навыки, важные для этой позиции</div>
+              <div class="info-text">
+                Описание
+              </div>
+            </div>
+            <div class="info-line">
+              <div class="info-label">Навыки работы на ПК</div>
+              <div class="info-text">
+                Описание
+              </div>
+            </div>
+            <div class="info-line">
+              <div class="info-label">Наличие водительских прав, личного автомобиля</div>
+              <div class="info-text">
+                -
+              </div>
+            </div>
+            <div class="info-line">
+              <div class="info-label">Личные качества</div>
+              <div class="info-text">
+                -
+              </div>
+            </div>
+            <div class="info-line">
+              <div class="info-label">Другая важная информация</div>
+              <div class="info-text">
+                -
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h5>Контактная информация</h5>
+          <div class="info-card-text">
+            <div class="info-line">
+              <div class="info-label">Электронный адрес для отправки резюме</div>
+              <div class="info-text">
+                Описание
+              </div>
+            </div>
+            <div class="info-line">
+              <div class="info-label">Телефон</div>
+              <div class="info-text">
+                Описание
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+                <span class="contacts">
+                    8 (4212) 76-17-25
+                    <br>
+                    +7 (914) 414-33-79 (WhatsApp)
+                    <br>
+                    start-k@pnu.edu.ru
+                </span>
+      <img alt="pnu-logo" src="img/logo.png"/>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

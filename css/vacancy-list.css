@@ -9,6 +9,12 @@
     margin-right: 20px;
 }
 
+@media screen and (max-width: 780px) {
+    .search input {
+        margin-right: 10px;
+    }
+}
+
 .search-button {
     border-radius: 30px;
     border: none;
@@ -78,6 +84,7 @@
 @media screen and (max-width: 780px) {
     .card-head {
         display: block;
+        margin-bottom: 16px;
     }
 }
 
@@ -96,6 +103,12 @@
     margin-bottom: 32px;
 }
 
+@media screen and (max-width: 780px) {
+    .card-title {
+        margin-bottom: 16px;
+    }
+}
+
 .card-title h5 {
     color: inherit;
     margin-bottom: 16px;
@@ -109,56 +122,45 @@
     color: #858585;
 }
 
-.list-pages {
+.pagination {
     margin: 32px 0;
     width: 100%;
     text-align: center;
-    display:inline;
+    display: inline-block;
 }
 
-.pages {
-    list-style-image: none;
-    padding: 0;
-    margin: 0;
-    /*display: flex;*/
-}
-
-.pages li {
-    display: inline;
-    padding: 0;
-}
-
-.pages li a,
-.pages li span {
+.pagination a{
     font-weight: bold;
     color: #0A4660;
     padding: 8px 12px;
     /*float: left;*/
 }
 
-.pages li a:hover {
+.pagination a:hover {
     text-decoration: none;
-    background-color: #F0F5F8;
+    background-color: #F0F0F0;
 }
 
-.pages li .current-page{
+.pagination a.active{
     color: white;
     background-color: #1493A5;
 }
 
-.pages .disabled span {
+.pagination a.inactive{
     color: #858585;
 }
 
 @media screen and (max-width: 780px) {
-    .list-pages {
+    .pagination {
         margin: 16px 0;
     }
 
-    .pages li a,
-    .pages li span {
-        float: left;
+    .pagination a{
+        padding: 5px 8px;
     }
 
+    .button {
+        margin-top: 8px;
+    }
 }
 
